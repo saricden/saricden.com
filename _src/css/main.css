@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     color: inherit;
-    font-family: sans-serif;
-    font-size: 0.92rem;
+    font-family: 'Open Sans', sans-serif;
 }
 html, body {
     height: 100%;
     background-color: #5C3A0A;
+    font-size: 14px;
 }
 nav {
     width: 200px;
@@ -16,10 +16,12 @@ nav {
     color: #FFF;
     background-color: #7A7;
     letter-spacing: 1px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 0px #333 inset;
 }
 main {
     min-height: 350px;
-    padding-top: 30px;
+    padding-top: 12px;
     background-color: #FFF;
 }
 h1, nav h2 {
@@ -28,13 +30,19 @@ h1, nav h2 {
 h1 {
     padding: 15px 0;
     text-align: center;
-    text-transform: uppercase;
-    font-size: 40px;
+    font-size: 3.93em;
+    font-family: 'Cabin Sketch', cursive;
+}
+p {
+    width: 100%;
+    text-align: center;
 }
 nav h2 {
+    padding: 15px 30px;
     color: #FFF;
     background: #585 url(../img/small-logo.png) no-repeat 5px center;
-    padding: 15px 30px;
+    font-size: 1em;
+    box-shadow: 0 5px 15px 0px #333 inset;
 }
 nav ul li a {
     display: block;
@@ -49,7 +57,15 @@ nav ul li:last-child a {
     border-bottom: solid 1px #585;
 }
 nav ul li.active a {
+    border-top-color: transparent;
     border-right-color: #FFF;
     color: #585;
     background-color: #FFF;
+}
+nav ul li.active + li a {
+    border-top-color: transparent;
+}
+
+@media (max-width: 650px) {
+    nav { width: 0; }
 }
