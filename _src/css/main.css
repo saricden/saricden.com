@@ -102,4 +102,4 @@ nav ul li.active + li a {
 
 /* Animation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-nav { transition: margin 0.5s; }
+nav, main { transition: margin 0.5s; }
