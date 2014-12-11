@@ -20,7 +20,7 @@
         </nav>
         <main id="content">
             <h1>Kirk M. // saricDen</h1>
-            <p>[Frontend / Serverside / Game] Developer</p>
+            <p>[Frontend / Backend / Game] Developer</p>
         </main>
         
         <script type="text/javascript" src="../_src/js/main.js"></script>
