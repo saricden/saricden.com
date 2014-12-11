@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Kirk M. // saricDen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch|Open+Sans:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../_src/css/main.css">
     </head>
