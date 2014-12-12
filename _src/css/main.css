@@ -24,6 +24,9 @@ nav {
 }
 .open { margin: 0 !important; }
 main {
+    height: 100%;
+}
+main section {
     min-height: 350px;
     padding-top: 12px;
     background-color: #FFF;
