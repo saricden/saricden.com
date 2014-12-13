@@ -3,6 +3,6 @@
                 <h1>Kirk M. // saricDen</h1>
                 <p>[Frontend / Backend / Game] Developer</p>
 
-                <img class="sprite-me" src="../_src/img/dummy-img.png" alt> 
+                <img class="sprite-me" src="../_src/img/kirk-sprite.png" alt> 
             </section>
 <?php include('../_src/inc/footer.php'); ?>
