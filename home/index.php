@@ -1,4 +1,7 @@
-<?php include('../_src/inc/header.php'); ?>
+<?php
+    require_once('../_src/php/core.php');
+    printHeader(0);
+?>
             <section>
                 <h1>Kirk M. // saricDen</h1>
                 <p>[Frontend / Backend / Game] Developer</p>
@@ -6,4 +9,4 @@
 
                 <img class="sprite-me" src="../_src/img/kirk-sprite.png" alt> 
             </section>
-<?php include('../_src/inc/footer.php'); ?>
+<?php printFooter(); ?>
