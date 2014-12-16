@@ -31,9 +31,10 @@ main {
 main section {
     position: relative;
     z-index: 1;
-    min-height: 350px;
+    min-height: 250px;
     padding-top: 12px;
-    background-color: #FFF;
+    padding-bottom: 157px;
+    background: #FFF url(../img/grass-block.png) repeat-x 0 bottom;
     overflow: hidden;
 }
 h1, nav h2 {
@@ -108,10 +109,23 @@ nav ul li.active + li a {
 .sprite-me {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 43px;
     left: 0;
     right: 0;
     margin: 0 auto;
+}
+.center-btn {
+    display: block;
+    width: 120px;
+    margin: 20px auto;
+    padding: 8px 0;
+    padding: 8px 0;
+    border: solid 1px #AAA;
+    border-radius: 3px;
+    color: #555;
+    font-size: 0.95em;
+    text-decoration: none;
+    text-align: center;
 }
 
 
