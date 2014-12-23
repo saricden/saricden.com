@@ -27,8 +27,9 @@ nav {
 .open { margin: 0 !important; }
 main {
     height: 100%;
+    overflow-y: auto;
 }
-main section {
+main article {
     position: relative;
     z-index: 1;
     min-height: 250px;
@@ -36,6 +37,31 @@ main section {
     padding-bottom: 157px;
     background: #FFF url(../img/grass-block.png) repeat-x 0 bottom;
     overflow: hidden;
+}
+main article section {
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+main article section aside { width: 25%; }
+main article section div { width: 75%; }
+main article section aside, main article section div { float: left; }
+main article section p {
+    margin-bottom: 10px;
+    font-size: 1.15em;
+    letter-spacing: 2px;
+    text-align: justify;
+    line-height: 2em;
+}
+main article secion aside ul {
+    list-style: none;
+}
+main article section aside ul li {
+    padding: 10px;
+}
+main article section div p {
+    text-align: left;
+    
 }
 h1, nav h2 {
     font-weight: normal;
@@ -102,6 +128,7 @@ nav ul li.active + li a {
 }
 #nav-btn span:last-child { margin: 0; }
 .hide { display: none !important; }
+.clr { clear: both; }
 
 
 /* Home
