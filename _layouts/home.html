@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html>
+---
+layout: wrap
+---
+<header>
+  <h1>{{ page.heading }}</h1>
+  <img class="portrait" src="/src/img/kirk.png" alt="Picture of Kirk">
+</header>
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+<main class="article-grid">
+  <article>
+    <div>
+      <div class="content">
+        <h2>Recent post</h2>
+        <p>Snippet snippet ggd fdd dg daw rwesffesefs ds sfsgddg gdgd fgd gfgg vzvzxvv DDASDAS</p>
+      </div>
+      <div class="readmore">
+        <a href>Read post &raquo;</a>
       </div>
     </div>
+  </article>
 
-    {% include footer.html %}
+  <article>
+    <div>
+      <div class="content">
+       <h2>Current project</h2>
+        <p>Snippet snippet ggd fdd dg daw rwesffesefs ds sfsgddg gdgd fgd gfgg vzvzxvv DDASDAS</p>
+      </div>
+      <div class="readmore">
+        <a href>Check it out &raquo;</a>
+      </div>
+    </div>
+  </article>
 
-  </body>
-
-</html>
+  <article>
+    <div>
+      <div class="content">
+        <h2>About me</h2>
+        <p>{{ page.about }}</p>
+      </div>
+      <div class="readmore">
+        <a href>About me &raquo;</a>
+      </div>
+    </div>
+  </article>
+</main>
