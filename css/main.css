@@ -345,3 +345,12 @@ img.project-icon {
     text-align: left;
   }
 }
+
+/* Contact
+----------------------------------------- */
+#sosneaky {
+  display: block;
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
