@@ -1,6 +1,8 @@
 ---
-layout: page
+layout: projects
 navOrder: 2
 title: Projects
-permalink: /projects
+permalink: /projects/
+
+heading: These are my super cool digital projects
 ---

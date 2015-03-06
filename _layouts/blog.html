@@ -1,0 +1,20 @@
+---
+layout: wrap
+---
+<h1>{{ page.heading }}</h1>
+
+<main class="article-grid">
+{% for post in site.categories.blog %}
+  <article>
+    <div>
+      <div class="content">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+      </div>
+      <div class="readmore">
+        <a href="{{ post.url }}">Read post &raquo;</a>
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</main>

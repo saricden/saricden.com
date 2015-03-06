@@ -11,11 +11,12 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-weight: 300;
 }
 
 h1 {
+  margin-bottom: 40px;
   color: #5E9DA0;
   font-size: 30px;
   text-align: center;
@@ -24,13 +25,29 @@ h1 {
 h2 {
   font-size: 18px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
-article > div {
+p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+a {
+  font-size: 14px;
+}
+
+article > div, .article-list article, .single > article {
   border-radius: 3px;
   color: #333;
   background-color: #FFF;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.single > article {
+  box-sizing: border-box;
+  margin: 40px 0;
+  padding: 20px;
 }
 
 @media (min-width: 600px) {
@@ -49,6 +66,14 @@ article > div {
 	width: 100%;
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+.article-list {
+  margin: 40px 0;
+}
+
+.article-list > article {
+  height: 220px;
 }
 
 .article-grid:after {
@@ -83,7 +108,10 @@ article > div {
   line-height: 20px;
 }
 
-.article-grid article > div:before, .article-grid article > div > .readmore {
+.article-grid article > div:before,
+.article-grid article > div > .readmore,
+.article-list article > .readmore
+ {
   content: "";
   display: block;
 }
@@ -92,13 +120,15 @@ article > div {
   padding-top: 50%;
 }
 
-.article-grid article > div > .readmore {
+.article-grid article > div > .readmore,
+.article-list article > .readmore {
   position: absolute;
+  left: 0;
   bottom: 0;
   z-index: 2;
   width: 100%;
   padding-bottom: 20px;
-  padding-top: 35px;
+  padding-top: 50px;
   text-align: center;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0), #FFF 35px);
   background: -o-linear-gradient(rgba(255, 255, 255, 0), #FFF 35px);
@@ -180,7 +210,7 @@ nav a, nav .logo, #menu-btn, #menu-btn span {
 nav .logo {
   float: left;
 	color: #FFF;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Serif', serif;
 	font-size: 16px;
 	text-decoration: none;
 }
@@ -269,4 +299,49 @@ img.portrait {
   max-width: 150px;
   border: solid 2px #5E9DA0;
   border-radius: 150px;
+}
+
+/* Projects
+----------------------------------------- */
+article.project {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
+article.project > .content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: transparent;
+}
+
+article.project > img, img.project-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+img.project-icon {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  article.project > .content {
+    padding-left: 120px;
+  }
+  article.project > img {
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  article.project > .readmore {
+    box-sizing: border-box;
+    padding-left: 120px;
+    text-align: left;
+  }
 }
