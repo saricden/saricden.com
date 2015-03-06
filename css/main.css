@@ -326,6 +326,10 @@ article.project > img, img.project-icon {
   margin: 0 auto;
 }
 
+article.project > img {
+  display: none;
+} 
+
 img.project-icon {
   margin-bottom: 20px;
 }
@@ -335,6 +339,7 @@ img.project-icon {
     padding-left: 120px;
   }
   article.project > img {
+    display: block;
     margin: 0;
     position: absolute;
     top: 20px;
