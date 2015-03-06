@@ -7,29 +7,33 @@ layout: wrap
 </header>
 
 <main class="article-grid">
+  {% for post in site.categories.blog limit:1 %}
   <article>
     <div>
       <div class="content">
         <h2>Recent post</h2>
-        <p>Snippet snippet ggd fdd dg daw rwesffesefs ds sfsgddg gdgd fgd gfgg vzvzxvv DDASDAS</p>
+        <p>{{ post.content }}</p>
       </div>
       <div class="readmore">
-        <a href>Read post &raquo;</a>
+        <a href="{{ post.url }}">Read post &raquo;</a>
       </div>
     </div>
   </article>
+  {% endfor %}
 
+  {% for post in site.categories.project limit:1 %}
   <article>
     <div>
       <div class="content">
        <h2>Current project</h2>
-        <p>Snippet snippet ggd fdd dg daw rwesffesefs ds sfsgddg gdgd fgd gfgg vzvzxvv DDASDAS</p>
+        <p>{{ post.content }}</p>
       </div>
       <div class="readmore">
-        <a href>Check it out &raquo;</a>
+        <a href="{{ post.url }}">Check it out &raquo;</a>
       </div>
     </div>
   </article>
+  {% endfor %}
 
   <article>
     <div>

@@ -5,7 +5,7 @@ layout: wrap
 
 <main class="single">
   <article>
-    <img class="project-icon" src="/src/img/project-icons/{{ page.icon }}" alt>
+    {% if page.icon %}<img class="project-icon" src="/src/img/project-icons/{{ page.icon }}" alt>{% endif %}
     {{ content }}
   </article>
 </main>

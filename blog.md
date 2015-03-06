@@ -4,5 +4,5 @@ navOrder: 3
 title: Blog
 permalink: /blog/
 
-heading: I write things about things. No niche life son.
+heading: A collection of stuff I've written about.
 ---
