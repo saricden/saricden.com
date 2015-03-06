@@ -1,7 +1,7 @@
 ---
 layout: wrap
 ---
-<h1>{{ page.title }}</h1>
+<h1>{% if page.heading %} {{ page.heading }} {% else %} {{ page.title }} {% endif %}</h1>
 
 <main class="single">
   <article>

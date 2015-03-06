@@ -9,7 +9,7 @@ layout: wrap
     <div>
       <div class="content">
         <h2>{{ post.title }}</h2>
-        <p>{{ post.content }}</p>
+        <p>{{ post.content | strip_html }}</p>
       </div>
       <div class="readmore">
         <a href="{{ post.url }}">Read post &raquo;</a>

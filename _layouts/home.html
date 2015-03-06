@@ -12,7 +12,7 @@ layout: wrap
     <div>
       <div class="content">
         <h2>Recent post</h2>
-        <p>{{ post.content }}</p>
+        <p>{{ post.content | strip_html }}</p>
       </div>
       <div class="readmore">
         <a href="{{ post.url }}">Read post &raquo;</a>
@@ -26,7 +26,7 @@ layout: wrap
     <div>
       <div class="content">
        <h2>Current project</h2>
-        <p>{{ post.content }}</p>
+        <p>{{ post.content | strip_html }}</p>
       </div>
       <div class="readmore">
         <a href="{{ post.url }}">Check it out &raquo;</a>
@@ -35,15 +35,18 @@ layout: wrap
   </article>
   {% endfor %}
 
+  {% assign about = (site.pages | where: "permalink" , "/about/") %}
+  {% for page in about %}
   <article>
     <div>
       <div class="content">
         <h2>About me</h2>
-        <p>{{ page.about }}</p>
+        <p>{{ page.content | strip_html }}</p>
       </div>
       <div class="readmore">
-        <a href>About me &raquo;</a>
+        <a href="{{ page.url }}">About me &raquo;</a>
       </div>
     </div>
   </article>
+  {% endfor %}
 </main>
