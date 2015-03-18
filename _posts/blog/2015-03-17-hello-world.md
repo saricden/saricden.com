@@ -12,6 +12,6 @@ If you're reading this wondering why I'm ranting about how lame this post is, th
 
 If I were to label myself and my intention for this blog with two words those words would be <em>curious</em> and <em>creative</em>. Plus you know: tallish, sleep deprived, unintentionally judgey, and reasonable draw-er.
 
-If nothing else I hope my writing inspires curiousity and critical thinking, and at the end of the day: questions.
+If nothing else I hope my writing inspires curiosity and critical thinking, and at the end of the day: questions.
 
 Kirk out.
