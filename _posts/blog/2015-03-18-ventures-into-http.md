@@ -4,13 +4,13 @@ title:  "Ventures into HTTP"
 date:   2015-03-18
 categories: blog
 ---
-At the moment I'm working on <a href="/project/crawlr" target="_blank">a side project</a> that was recently rendered completely redundent by my coworker pointing out that Google is a thing.
+At the moment I'm working on <a href="/project/crawlr" target="_blank">a side project</a> that was recently rendered completely redundant by my co-worker pointing out that Google is a thing.
 
 Nevertheless I plan on seeing it through to completion because I'm very curious about web scraping, and I want to learn more about HTTP, the nature of the internet, and regular expressions.
 
 I've therefore been doing a fair bit of reading about HTTP status codes, response types, and so on. I was rather surprised to find that the things servers respond with aren't always in a consistent format.
 
-My guess is this has to do with servers being independantly operated, with so many varieties of possible software stacks and configurations. Any computer can technically act as a server.
+My guess is this has to do with servers being independently operated, with so many varieties of possible software stacks and configurations. Any computer can technically act as a server.
 
 Kind of a bummer for the client though.
 
