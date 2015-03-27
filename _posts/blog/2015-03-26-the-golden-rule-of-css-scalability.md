@@ -18,16 +18,16 @@ Okay lovely, what's this golden rule already?
 
 I think the trick is to:
 
-<strong>Keep everything as generic/reusable as possible. Only be specific when you need to be.</strong>
-
-This may seem obvious. If one keeps their styling as simple as possible, and only gets specific when they need to they'll end up with readable and efficient code.
+<strong>Style majority first. Only be specific when you need to be.</strong>
 
 Admittedly, this can be difficult to maintain in practise. It's very easy to think only of the end result, and not factor in potential (perhaps inevitable) changes, and scope additions.
 
-A couple of things to establish before building anything: figure out consistent fonts for headings, navigation elements, text, and so on. And identify common layout patterns, and stick to them.
+A couple of things to establish before building anything: figure out consistent fonts for headings, navigation elements, text, and so on. Identify common layout patterns, and stick to them.
+
+Once you've located the common design patterns that are consistent throughout (hopefully) several areas, build those first. Then if the homepage has a big header image, or there's a page with some special layout, write specific selectors for those edge cases.
 
 If you're working with a designer, the best thing you can do is talk this stuff out. If you're designing and developing, make sure you think of the re-usability of your components / styles. Try to think of potential future updates. Try not to deviate drastically from the base styles.
 
 I think the reasoning here is pretty sound, but I'm not much of a designer, so feel free to tell me off if I'm skipping over all kinds of important design concepts.
 
-Have a good morning/day/evening!
+Good day!
