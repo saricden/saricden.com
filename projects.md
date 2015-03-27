@@ -1,6 +1,6 @@
 ---
 layout: projects
-navOrder: 2
+navOrder: 3
 title: Projects
 permalink: /projects/
 

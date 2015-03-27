@@ -1,6 +1,6 @@
 ---
 layout: blog
-navOrder: 3
+navOrder: 2
 title: Blog
 permalink: /blog/
 
