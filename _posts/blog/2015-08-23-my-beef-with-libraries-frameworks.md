@@ -6,7 +6,7 @@ categories: blog
 ---
 Let me get one thing straight. I don't think libraries or frameworks are bad. Not by any means.
 
-Libraries can be powerful tools for providing generic reusable functionality, and frameworks offer the additional benifit of a provided structural paradigm for your code (pretty much essential when working in teams).
+Libraries can be powerful tools for providing generic reusable functionality, and frameworks offer the additional benefit of a provided structural paradigm for your code (pretty much essential when working in teams).
 
 I do not think however, they should be used by beginner programmers.
 
@@ -14,7 +14,7 @@ The reason I take issue with beginners using them is that because they simplify 
 
 A brilliant site that is full of examples for jQuery is <a href="http://youmightnotneedjquery.com/">youmightnotneedjquery.com</a>.
 
-The problem with not understanding the fundementals of anything is when it comes time to think outside the box, it will be very hard to do so.
+The problem with not understanding the fundamentals of anything is when it comes time to think outside the box, it will be very hard to do so.
 
 I myself experienced this by learning how to do database joins with <a href="http://propelorm.org/">Propel ORM</a> instead of raw SQL. While it worked at the time, when I was faced with a situation where raw SQL joins were required it was very challenging.
 
