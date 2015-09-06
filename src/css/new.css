@@ -81,6 +81,13 @@ p, a {
   color: #FFF;
 }
 
+.blk-link img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  
+}
+
 .hm-latest-link, .social-circles {
   float: right;
 }
@@ -105,11 +112,11 @@ p, a {
 .social-circles a {
   display: block;
   float: left;
+  margin: 5px;
+  text-align: center;
+}
+
+.social-circles a, .social-circles img {
   width: 40px;
   height: 40px;
-  margin: 5px;
-  border-radius: 500px;
-  border: solid 1px #FFF;
-  color: #FFF;
-  text-align: center;
 }
