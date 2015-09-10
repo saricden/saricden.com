@@ -1,7 +1,7 @@
 ---
 layout: blog
 navOrder: 2
-title: Blog
+title: Articles
 permalink: /blog/
 
 heading: A collection of stuff I've written about.

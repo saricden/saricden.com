@@ -1,20 +1,123 @@
-.text-center {
+/* Base styles
+-------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 51px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1em;
+}
+h1 {
+  font-size: 46px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* General reusable
+-------------------------------- */
+.clr:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.vc-container {
+  display: table;
+}
+.vc-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.btn {
+  display: inline-block;
+  min-width: 250px;
+  margin: 10px;
+  padding: 10px 25px;
+  border: solid 1px blue;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.textcenter {
   text-align: center;
 }
-.block-img, nav a {
+nav.global {
   display: block;
-}
-
-.block-img {
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 30px;
-  border: double 3px #CCC;
-}
-
-nav a {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 1px #EEE;
   color: #000;
-  margin: 5px 0;
-  text-decoration: none;
+  background-color: #FFF;
+}
+nav.global a {
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+}
+nav.global a.search {
+  float: right;
+  cursor: pointer;
+}
+
+/* Fake ad variants (temp)
+-------------------------------- */
+.mockad {
+  display: inline-block;
+  margin-top: 30px;
+  width: 100%;
+  background-color: #EEE;
+  text-align: center;
+}
+.mockad.sm {
+  max-width: 250px;
+  height: 90px;
+  line-height: 90px;
+}
+
+/* Homepage variants
+-------------------------------- */
+.hm-title, .hm-latest {
+  float: left;
+  width: 50%;
+  height: calc(100vh - 51px);
+}
+.hm-title {
+  background: #EEE;
+}
+.hm-title h1 {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  text-align: right;
+  line-height: 1.5em;
+}
+.hm-latest {
+  background-color: #FFF;
+}
+.hm-latest h2, p {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 10px auto;
+}
+.hm-latest p {
+  text-align: justify;
+  line-height: 1.5em;
 }

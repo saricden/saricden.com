@@ -1,7 +1,8 @@
 ---
 layout: single
-title: About Kirk
+title: About
 permalink: /about/
+navOrder: 3
 
 heading: Aw, you want to know more about me?
 ---

@@ -1,20 +1,10 @@
-<nav>
-  <div class="wrap">
-    <a class="logo" href="/">Kirk M. | saricDen</a>
-    <a id="menu-btn" href="/get-js-fool">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  </div>
-</nav>
-
 {% assign pages = site.pages | sort: "navOrder" %}
-<div id="nav-panels">
+<nav class="global clr">
+  <a class="logo" href="/">[logo]</a>
   {% for page in pages %}
-    {% if page.title and page.navOrder %}
-      <a class="navlink" href="{{ page.url }}"><span>{{ page.title }}<span></a>
+    {% if page.title and page.navOrder and page.title != "Home" %}
+      <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
     {% endif %}
   {% endfor %}
-</div>
+  <a class="search">[search]</a>
+</nav>
