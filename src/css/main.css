@@ -75,6 +75,9 @@ nav.global a.search {
   float: right;
   cursor: pointer;
 }
+nav.global img {
+  vertical-align: text-bottom;
+}
 
 /* Fake ad variants (temp)
 -------------------------------- */
@@ -112,7 +115,8 @@ nav.global a.search {
 .hm-latest {
   background-color: #FFF;
 }
-.hm-latest h2, p {
+.hm-latest h2, .hm-latest p, .hm-latest label {
+  display: block;
   width: 100%;
   max-width: 400px;
   margin: 0 auto 10px auto;

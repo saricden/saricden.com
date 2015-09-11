@@ -10,6 +10,7 @@ layout: wrap
 
   <aside class="hm-latest vc-container">
     <div class="vc-content">
+      <label>Latest:</label>
       {% for post in site.categories.blog limit:1 %}
         <article>
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>

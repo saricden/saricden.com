@@ -1,6 +1,6 @@
 {% assign pages = site.pages | sort: "navOrder" %}
 <nav class="global clr">
-  <a class="logo" href="/">[logo]</a>
+  <a class="logo" href="/"><img src="/src/img/logo.svg"></a>
   {% for page in pages %}
     {% if page.title and page.navOrder and page.title != "Home" %}
       <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
