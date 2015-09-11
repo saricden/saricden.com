@@ -40,7 +40,8 @@ a:hover {
 }
 .btn {
   display: inline-block;
-  min-width: 250px;
+  width: 100%;
+  max-width: 250px;
   margin: 10px;
   padding: 10px 25px;
   border: solid 1px blue;
@@ -75,6 +76,9 @@ nav.global a.search {
   float: right;
   cursor: pointer;
 }
+nav.global a.mobile-nav {
+  display: none;
+}
 nav.global img {
   vertical-align: text-bottom;
 }
@@ -100,6 +104,8 @@ nav.global img {
   float: left;
   width: 50%;
   height: calc(100vh - 51px);
+  box-sizing: border-box;
+  padding: 10px;
 }
 .hm-title {
   background: #EEE;
@@ -124,4 +130,34 @@ nav.global img {
 .hm-latest p {
   text-align: justify;
   line-height: 1.5em;
+}
+
+@media only screen and (max-width: 700px) {
+  nav.global a {
+    display: none;
+  }
+  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav {
+    display: block;
+  }
+
+  .btn {
+    width: auto;
+    max-width: none;
+  }
+
+  .hm-title, .hm-latest {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: calc(40vh - 51px);
+  }
+  .hm-latest {
+    height: auto;
+  }
+  .hm-title h1 {
+    max-width: none;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
 }
