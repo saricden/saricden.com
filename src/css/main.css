@@ -59,8 +59,8 @@ nav.global {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  border-bottom: solid 1px #EEE;
+  padding: 0 10px;
+  border-bottom: solid 1px #CCC;
   color: #000;
   background-color: #FFF;
 }
@@ -71,8 +71,9 @@ nav.global a {
   line-height: 50px;
   padding: 0 10px;
   font-size: 18px;
+  color: #000;
 }
-nav.global a.search {
+nav.global a.search, nav.global a.mobile-nav {
   float: right;
   cursor: pointer;
 }
@@ -80,7 +81,7 @@ nav.global a.mobile-nav {
   display: none;
 }
 nav.global img {
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 /* Fake ad variants (temp)
@@ -133,16 +134,13 @@ nav.global img {
 }
 
 @media only screen and (max-width: 700px) {
-  nav.global a {
-    display: none;
-  }
-  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav {
-    display: block;
-  }
-
   .btn {
     width: auto;
     max-width: none;
+  }
+
+  nav.global {
+    padding: 0;
   }
 
   .hm-title, .hm-latest {
@@ -159,5 +157,14 @@ nav.global img {
     margin: 0;
     font-size: 24px;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav.global a {
+    display: none;
+  }
+  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav {
+    display: block;
   }
 }
