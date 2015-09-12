@@ -77,7 +77,7 @@ nav.global a.search, nav.global a.mobile-nav {
   float: right;
   cursor: pointer;
 }
-nav.global a.mobile-nav {
+nav.global a.mobile-nav, nav.global a.x {
   display: none;
 }
 nav.global img {
