@@ -1,36 +1,38 @@
-/*
+// Needs cleaning
 
-This is going to be refactored so hard.
-
-*/
-
-function e(id) {
-  return document.getElementById(id);
-}
-
-var navMenuBtn = e('menu-btn');
-var navPanels = e('nav-panels');
-
-function openNavMenu(e) {
+document.querySelector(".mobile-nav").addEventListener("click", function(e) {
   e.preventDefault();
-  //var newClass = open ? "open" : "";
-  navPanels.className = "open";
+
+  document.querySelector(".test-menu").classList.add("open");
+  document.querySelector(".x").classList.add("open");
+
+  var navLinks = document.querySelectorAll(".page-link");
+  var delay = 100;
+  var offset = 0;
+
+  for (var i = 0; i < navLinks.length; i++) {
+    setTimeout(function() {
+      var posOffset = 60+(offset*50);
+      navLinks[offset].classList.add("open");
+      navLinks[offset].style.top = posOffset+"px";
+      offset ++;
+    }, delay);
+    delay += 100;
+  }
+
+});
+
+var closeMenu = function(e) {
+  document.querySelector(".test-menu").classList.remove("open");
+  document.querySelector(".x").classList.remove("open");
+  var navLinks = document.querySelectorAll(".page-link");
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].classList.remove("open");
+  }
 };
 
-navMenuBtn.onclick = openNavMenu;
+var closeEles = document.querySelectorAll(".test-menu, .x");
 
-if (e('sosneaky')) {
-  var falnfsa = new Array(0x6B, 'i', 0x72, 'k', 0x40, 'sar', 0x69, 'cde', 0x6E, 0x2E, 'c', 'o', 0x6D);
-  var jjnlngf = '';
-  for (var i in falnfsa) {
-    var c = falnfsa[i];
-    if (typeof c == 'string') {
-      jjnlngf += c;
-    }
-    else {
-      jjnlngf += String.fromCharCode(c);
-    }
-  }
-  e('sosneaky').href = "mailto:"+jjnlngf;
-  e('sosneaky').innerHTML = jjnlngf;
+for (var i = 0; i < closeEles.length; i++) {
+  closeEles[i].addEventListener("click", closeMenu);
 }

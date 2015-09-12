@@ -3,9 +3,12 @@
   <a class="logo" href="/"><img src="/src/img/logo.svg"></a>
   {% for page in pages %}
     {% if page.title and page.navOrder and page.title != "Home" %}
-      <a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
+      <a class="page-link" href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a>
     {% endif %}
   {% endfor %}
   <a class="mobile-nav"><img src="/src/img/hamburger.svg"></a>
   <a class="search"><img src="/src/img/search.svg"></a>
+  <a class="x"><img src="/src/img/x.svg"></a>
+
+  <div class="test-menu"></div>
 </nav>
