@@ -64,7 +64,7 @@ nav.global {
   color: #000;
   background-color: #FFF;
 }
-nav.global a {
+nav.global a, a.x {
   display: block;
   float: left;
   height: 50px;
@@ -77,12 +77,34 @@ nav.global a.search, nav.global a.mobile-nav {
   float: right;
   cursor: pointer;
 }
-nav.global a.mobile-nav, nav.global a.x {
+nav.global a.mobile-nav, a.x {
   display: none;
 }
-nav.global img {
+nav.global img, a.x img {
   vertical-align: middle;
 }
+
+/* Search results
+-------------------------------- */
+.results {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+}
+.results li, .results li a {
+  display: block;
+}
+.results li {
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.results li a {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
 
 /* Fake ad variants (temp)
 -------------------------------- */
@@ -133,7 +155,7 @@ nav.global img {
   line-height: 1.5em;
 }
 
-.test-menu {
+.test-menu, .search-panel {
   width: 0;
   height: 0;
   border-bottom-left-radius: 100%;
@@ -147,11 +169,67 @@ nav.global img {
   transition: border-bottom-left-radius 0.6s, width 0.2s, height 0.4s;
 }
 
-.test-menu.open {
+.test-menu.open, .search-panel.open {
   width: 100%;
   height: 100%;
   border-radius: 0;
   opacity: 1;
+}
+
+.search-panel input {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 0;
+  border-bottom: solid 2px #AAA;
+  outline: none;
+  font-size: 18px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.search-panel.open input {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.6s, opacity 0.6s;
+  transition-delay: 0.6s;
+}
+
+/* messy, to be cleaned.. */
+a.x {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+}
+
+nav.global a.page-link.open, a.open.x {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+
+  transition: opacity 0.6s, visibility 0.6s;
+}
+
+a.open.x {
+  display: block;
+  width: 30px;
+  top: 0;
+  left: auto;
+  right: 15px;
+  background-color: #FFF;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 700px) {
@@ -179,38 +257,22 @@ nav.global img {
     font-size: 24px;
     text-align: center;
   }
+
+  a.open.x {
+    right: 0;
+  }
 }
 
 @media only screen and (max-width: 550px) {
   nav.global a {
     display: none;
   }
-  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav, nav.global a.page-link, nav.global a.x {
+  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav, nav.global a.page-link {
     display: block;
   }
-  nav.global a.page-link, nav.global a.x {
+  nav.global a.page-link, a.x {
     opacity: 0;
     visibility: hidden;
     position: fixed;
-  }
-  nav.global a.open, nav.global a.open.x {
-    opacity: 1;
-    visibility: visible;
-    z-index: 100;
-    left: 0;
-    width: 100%;
-    font-size: 22px;
-    text-align: center;
-
-    transition: opacity 0.6s, visibility 0.6s;
-  }
-
-  nav.global a.open.x {
-    width: 30px;
-    top: 0;
-    left: auto;
-    right: 0;
-    background-color: #FFF;
-    cursor: pointer;
   }
 }
