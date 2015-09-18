@@ -1,0 +1,25 @@
+---
+layout: wrap
+---
+<header class="li-title">
+  <h1>{{ page.heading }}</h1>
+</header>
+
+<div class="centerblock clr">
+  <div class="col eight li-list">
+    {% if postSrc == articles %}
+      <ul>
+        {% for post in site.categories.blog %}
+          <li>{{ post.title }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+  <aside class="col four li-aside">
+    {% if page.asideModules %}
+      {% for mod in page.asideModules %}
+        {% include aside_modules/{{ mod }}.html %}
+      {% endfor %}
+    {% endif %}
+  </aside>
+</div>

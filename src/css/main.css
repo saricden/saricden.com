@@ -51,6 +51,19 @@ a:hover {
 .textcenter {
   text-align: center;
 }
+.centerblock {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.col {
+  display: block;
+  float: left;
+}
+.four { width: 33%; }
+.six { width: 50%; }
+.eight { width: 66%; }
 nav.global {
   display: block;
   position: fixed;
@@ -105,12 +118,54 @@ nav.global img, a.x img {
   font-size: 18px;
 }
 
+/* Aside modules
+-------------------------------- */
+.aside-module {
+  margin-bottom: 20px;
+}
+.aside-module header {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #CCC;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.aside-module p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+/* Subscribe module
+-------------------------------- */
+.subscribe input {
+  display: block;
+  width: calc(100% - 22px);
+  height: 30px;
+  line-height: 30px;
+  margin: 0 10px;
+  padding: 0;
+  border: solid 1px #888;
+  text-align: center;
+}
+.subscribe input[type="text"] {
+  background-color: #FFF;
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  outline: none;
+}
+.subscribe input[type="submit"] {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 /* Fake ad variants (temp)
 -------------------------------- */
 .mockad {
   display: inline-block;
-  margin-top: 30px;
+  margin: 10px 0 0 10px;
   width: 100%;
   background-color: #EEE;
   text-align: center;
@@ -119,6 +174,22 @@ nav.global img, a.x img {
   max-width: 250px;
   height: 90px;
   line-height: 90px;
+}
+.mockad.sq {
+  max-width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+.mockad.wide {
+  max-width: 250px;
+  height: 120px;
+  line-height: 120px;
+}
+.ad-note {
+  display: block;
+  max-width: 260px;
+  font-size: 12px;
+  text-align: right;
 }
 
 /* Homepage variants
@@ -153,6 +224,26 @@ nav.global img, a.x img {
 .hm-latest p {
   text-align: justify;
   line-height: 1.5em;
+}
+
+/* Listing page variants
+-------------------------------- */
+.li-title {
+  background-color: #EEE;
+  padding: 60px 20px;
+}
+.li-title h1 {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 34px;
+  text-align: center;
+}
+.li-list, .li-aside {
+  min-height: calc(100vh - 239px);
+}
+.li-aside {
+  border-left: solid 1px #CCC;
 }
 
 .test-menu, .search-panel {
