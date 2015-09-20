@@ -8,9 +8,20 @@ layout: wrap
 <div class="centerblock clr">
   <div class="col eight li-list">
     {% if postSrc == articles %}
-      <ul>
+      {% assign postNum = site.categories.blog.size %}
+      <ul class="article-list">
         {% for post in site.categories.blog %}
-          <li>{{ post.title }}</li>
+          <li class="clr">
+            <div class="no">
+              <div>
+                article no.
+                <span>{{ postNum }}</span>
+              </div>
+            </div>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p>{{ post.content | truncatewords:20 | strip_html }}</p>
+          </li>
+          {% capture postNum %}{{ postNum | minus:1 }}{% endcapture %}
         {% endfor %}
       </ul>
     {% endif %}
