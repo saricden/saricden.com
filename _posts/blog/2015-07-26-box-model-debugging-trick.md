@@ -1,8 +1,15 @@
 ---
-layout: single
+layout: article
 title:  "Box Model Debugging Trick"
 date:   2015-07-26
 categories: blog
+
+adModules:
+  - ad_cluster
+
+asideModules:
+  - subscribe
+  - about_author
 ---
 A friend of at work used to always throw outlines on stuff when she wanted to debug something that wasn't quite right with the element's box model (margin, padding, border).
 

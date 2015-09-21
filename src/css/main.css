@@ -25,6 +25,9 @@ a:hover {
 a, p {
   font-family: sans-serif;
 }
+article p {
+  line-height: 1.4em;
+}
 
 /* General reusable
 -------------------------------- */

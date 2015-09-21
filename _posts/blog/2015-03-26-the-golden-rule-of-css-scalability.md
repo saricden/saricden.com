@@ -1,8 +1,15 @@
 ---
-layout: single
+layout: article
 title:  "The Golden Rule of CSS Scalability"
 date:   2015-03-26
 categories: blog
+
+adModules:
+  - ad_cluster
+
+asideModules:
+  - subscribe
+  - about_author
 ---
 On the face of it, CSS may not seem like a particularly complicated beast. Change a few font colours, position some boxes, and put some borders on stuff. Easy right?
 

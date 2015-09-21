@@ -1,8 +1,15 @@
 ---
-layout: single
+layout: article
 title:  "Why Flash (Was) Great"
 date:   2015-03-26
 categories: blog
+
+adModules:
+  - ad_cluster
+
+asideModules:
+  - subscribe
+  - about_author
 ---
 I'm all for open standards and what not, but before Flash is gone I want to make a few points as to why it was brilliant.
 

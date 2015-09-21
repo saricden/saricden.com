@@ -1,8 +1,17 @@
 ---
-layout: single
+layout: article
 title:  "My Beef With Libraries & Frameworks"
 date:   2015-08-23
 categories: blog
+
+illustration: /src/img/illustrations/test.svg
+
+adModules:
+  - ad_cluster
+
+asideModules:
+  - subscribe
+  - about_author
 ---
 Let me get one thing straight. I don't think libraries or frameworks are bad. Not by any means.
 

@@ -1,8 +1,15 @@
 ---
-layout: single
+layout: article
 title:  "Ventures into HTTP"
 date:   2015-03-18
 categories: blog
+
+adModules:
+  - ad_cluster
+
+asideModules:
+  - subscribe
+  - about_author
 ---
 At the moment I'm working on <a href="/project/crawlr" target="_blank">a side project</a> that was recently rendered completely redundant by my co-worker pointing out that Google is a thing.
 
