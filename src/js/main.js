@@ -1,5 +1,9 @@
 // Needs cleaning
 
+var e = function(id) {
+  return document.getElementById(id);
+};
+
 document.querySelector(".mobile-nav").addEventListener("click", function(e) {
   e.preventDefault();
 
@@ -79,3 +83,20 @@ document.querySelector(".search-panel input").addEventListener("keyup", function
     }
   }
 });
+
+// Contact un-hiding
+if (e('sosneaky')) {
+  var falnfsa = new Array(0x6B, 'i', 0x72, 'k', 0x40, 'sar', 0x69, 'cde', 0x6E, 0x2E, 'c', 'o', 0x6D);
+  var jjnlngf = '';
+  for (var i in falnfsa) {
+    var c = falnfsa[i];
+    if (typeof c == 'string') {
+      jjnlngf += c;
+    }
+    else {
+      jjnlngf += String.fromCharCode(c);
+    }
+  }
+  e('sosneaky').href = "mailto:"+jjnlngf;
+  e('sosneaky').innerHTML = jjnlngf;
+}
