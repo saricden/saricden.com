@@ -6,6 +6,15 @@ layout: wrap
 </header>
 
 <div class="centerblock clr">
+
+  <aside class="col four li-aside ad revfl">
+    {% if page.adModules %}
+      {% for mod in page.adModules %}
+        {% include aside_modules/{{ mod }}.html %}
+      {% endfor %}
+    {% endif %}
+  </aside>
+  
   <div class="col eight li-list">
     {% if postSrc == articles %}
       {% assign postNum = site.categories.blog.size %}
@@ -26,7 +35,7 @@ layout: wrap
       </ul>
     {% endif %}
   </div>
-  <aside class="col four li-aside">
+  <aside class="col four li-aside revfl">
     {% if page.asideModules %}
       {% for mod in page.asideModules %}
         {% include aside_modules/{{ mod }}.html %}

@@ -6,8 +6,11 @@ permalink: /articles/
 
 postSrc: articles
 
-asideModules:
+# same as aside modules, but diff DOM location for reflow
+adModules:
   - ad_cluster
+
+asideModules:
   - subscribe
   - about_author
 

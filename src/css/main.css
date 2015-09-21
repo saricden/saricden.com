@@ -63,6 +63,9 @@ a, p {
   display: block;
   float: left;
 }
+.col.revfl {
+  float: right;
+}
 .four { width: 33%; }
 .six { width: 50%; }
 .eight { width: 66%; }
@@ -280,12 +283,17 @@ nav.global img, a.x img {
 .li-title h1 {
   width: 100%;
   max-width: 600px;
+  line-height: 1.5em;
   margin: 0 auto;
   font-size: 34px;
   text-align: center;
 }
 .li-list, .li-aside {
-  min-height: calc(100vh - 239px);
+  padding-top: 10px;
+}
+.li-list {
+  box-sizing: border-box;
+  padding: 10px;
 }
 .li-aside {
   border-left: solid 1px #CCC;
@@ -368,6 +376,22 @@ a.open.x {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 820px) {
+  .li-list, .li-aside {
+    float: none;
+    clear: both;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+  }
+  .li-aside.ad, .ad-note {
+    text-align: center;
+  }
+  .ad-note {
+    max-width: none;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .btn {
     width: auto;
@@ -410,5 +434,12 @@ a.open.x {
     opacity: 0;
     visibility: hidden;
     position: fixed;
+  }
+
+  .li-title {
+    padding: 40px 20px;
+  }
+  .li-title h1 {
+    font-size: 24px;
   }
 }
