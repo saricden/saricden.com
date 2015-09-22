@@ -75,6 +75,7 @@ article p {
 nav.global {
   display: block;
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -198,6 +199,12 @@ nav.global img, a.x img {
   max-width: 260px;
   font-size: 12px;
   text-align: right;
+}
+
+/* Real ads
+-------------------------------- */
+.adsbygoogle {
+  margin-left: 10px;
 }
 
 /* Article list
