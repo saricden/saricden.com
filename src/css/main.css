@@ -105,6 +105,14 @@ nav.global a.mobile-nav, a.x {
 nav.global img, a.x img {
   vertical-align: middle;
 }
+a.glass-btn {
+  display: inline-block;
+  margin: 3px;
+  padding: 10px 20px;
+  border: solid 1px #000;
+  border-radius: 3px;
+  color: #000;
+}
 
 /* Search results
 -------------------------------- */
@@ -252,36 +260,28 @@ nav.global img, a.x img {
 
 /* Homepage variants
 -------------------------------- */
-.hm-title, .hm-latest {
-  float: left;
-  width: 50%;
-  height: calc(100vh - 51px);
-  box-sizing: border-box;
-  padding: 10px;
-}
 .hm-title {
-  background: #EEE;
+  width: 95%;
+  max-width: 450px;
+  height: calc(100vh - 51px);
+  float: left;
+  margin-left: 40px;
+  color: #000;
+  text-align: center;
 }
-.hm-title h1 {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 300px;
-  text-align: right;
-  line-height: 1.5em;
+.hm-title img {
+  width: 75px;
+  stroke: #FFF;
 }
-.hm-latest {
-  background-color: #FFF;
+.hm-title h1, .hm-title p {
+  margin: 30px 0;
 }
-.hm-latest h2, .hm-latest p, .hm-latest label {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 10px auto;
+.hm-title p {
+  font-size: 20px;
 }
-.hm-latest p {
-  text-align: justify;
-  line-height: 1.5em;
+.hm-bg {
+  background: #EEE url(/src/img/me-reduced.png) no-repeat bottom right;
+  background-size: auto 90%;
 }
 
 /* Listing page variants
@@ -402,7 +402,7 @@ a.open.x {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .btn {
     width: auto;
     max-width: none;
@@ -412,14 +412,17 @@ a.open.x {
     padding: 0;
   }
 
-  .hm-title, .hm-latest {
+  .hm-bg {
+    height: calc(100vh - 51px);
+    background-position: bottom center;
+    background-size: auto 40%;
+  }
+  .hm-title {
     float: none;
     clear: both;
     width: 100%;
-    height: calc(40vh - 51px);
-  }
-  .hm-latest {
-    height: auto;
+    height: 60%;
+    margin: 0 auto;
   }
   .hm-title h1 {
     max-width: none;
@@ -451,5 +454,11 @@ a.open.x {
   }
   .li-title h1 {
     font-size: 24px;
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .hm-title img {
+    display: none;
   }
 }
