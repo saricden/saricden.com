@@ -113,6 +113,12 @@ a.glass-btn {
   border-radius: 3px;
   color: #000;
 }
+img.meme {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 35px auto;
+}
 
 /* Search results
 -------------------------------- */
