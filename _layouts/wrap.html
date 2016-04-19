@@ -5,7 +5,55 @@
 
   <body>
 
-    {% include nav.html %}
+    <nav class="navbar navbar-fixed">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/about">
+            Kirk M. {<em>saricDen</em>}
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="nav navbar-nav social-links">
+            <li><a href="//facebook.com/saricden" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="//twitter.com/saricden" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="//github.com/saricden" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-home"></i>
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-gamepad"></i>
+                Games
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-photo"></i>
+                Gallery
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-book"></i>
+                Articles
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     {{content}}
 
@@ -16,13 +64,13 @@
       Hide yo kids, hide yo wife!!!!!!
       Cause we trackin errybody up in hur.
       */
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-60675242-1', 'auto');
-      ga('send', 'pageview');
+      // ga('create', 'UA-60675242-1', 'auto');
+      // ga('send', 'pageview');
 
     </script>
   </body>
