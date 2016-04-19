@@ -1,6 +1,8 @@
 ---
 ---
 @import "bootstrap-sass-3.3.6/assets/stylesheets/bootstrap";
+@import "sd-mixins";
+@import "sd-config";
 
 /* Boilerplate elements
 ---------------------------------- */
@@ -93,12 +95,12 @@ a {
   a {
     position: relative;
     display: block;
-    min-height: 100px;
+    min-height: 102px;
     box-sizing: border-box;
     margin-bottom: 15px;
-    padding: 10px;
+    padding: $item-padding;
     border: solid 1px #CCC;
-    border-radius: 3px;
+    border-radius: $item-bradius;
     background: #FFF url(/src/img/gamebox-arrow.png) no-repeat center right 10px;
     background-color: rgba(255, 255, 255, 0.5);
 
@@ -110,7 +112,7 @@ a {
       float: left;
       width: 80px;
       height: 80px;
-      border-radius: 3px;
+      border-radius: $item-bradius;
       box-shadow: 0 0 3px;
     }
 
@@ -143,17 +145,37 @@ a {
   background-color: #f0fff2;
   box-shadow: 0 0 15px #CCC;
 }
-.gamebox a:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-.gallery-item {
-  @include make-xs-column(4);
-  @include make-md-column(3);
 
-  .thumbnail {
+.gallery {
+  //@include limit-height(500px);
+
+  .gallery-item {
+    display: block;
+    float: left;
+    height: 102px;
+    width: 102px;
+    box-sizing: border-box;
+    margin-right: 15px;
     margin-bottom: 15px;
+    padding: $item-padding;
+    border: solid 1px #CCC;
+    border-radius: $item-bradius;
+    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    img {
+      display: block;
+      width: 88px;
+      height: 88px;
+      border-radius: $item-bradius;
+    }
+
+    transition: border-color 0.4s, background-color 0.4s, box-shadow 0.4s;
+  }
+  .gallery-item:hover {
+    border-color: #f0fff2;
+    background-color: #f0fff2;
+    box-shadow: 0 0 15px #CCC;
   }
 }
 
@@ -201,4 +223,12 @@ header.home {
       max-width: none;
     }
   }
+}
+
+/* Float-clearing elements
+---------------------------------- */
+.gamebox a:after, .gallery:after {
+  display: block;
+  content: "";
+  clear: both;
 }
