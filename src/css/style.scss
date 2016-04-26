@@ -31,11 +31,21 @@ h3 {
   color: #5e9467;
 }
 p {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
-a {
-  color: #5e9467;
+p a {
+  color: inherit;
+  padding: 1px;
+  border-bottom: dashed 1px;
+  border-radius: 3px;
   text-decoration: none !important;
+
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+}
+a:hover {
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
 }
 
 /* Bootstrap overrides
@@ -59,6 +69,7 @@ a {
 
 .nav.navbar-nav {
   li a {
+    color: #5e9467;
     margin: 15px;
     margin-left: 0;
     padding: 0 12px;
@@ -75,9 +86,6 @@ a {
     background-color: #f0fff2;
     box-shadow: 0 0 15px #f0fff2;
   }
-}
-.nav.navbar-nav.social-links li a {
-  margin-right: 0;
 }
 
 /* Bootstrap extensions
@@ -230,6 +238,28 @@ a {
 
   h2 {
     font-size: 26px;
+  }
+}
+
+.social-links {
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 22px;
+      color: #ed5555;
+      background-color: #7b1d1d;
+    }
   }
 }
 
