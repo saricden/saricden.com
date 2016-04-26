@@ -263,6 +263,40 @@ a:hover {
   }
 }
 
+.tvbox {
+  a {
+    position: relative;
+    display: block;
+    height: 268px;
+    margin-bottom: 10px;
+    border: solid 1px #CCC;
+    border-radius: 3px;
+    background-color: #FFF;
+
+    div {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      display: table;
+      background: #FFF url(http://lorempixel.com/200/200/cats/?dur=55) no-repeat center;
+      background-size: cover;
+
+      h3 {
+        display: table-cell;
+        vertical-align: middle;
+        background-color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+
+        small {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
 /* Page-specific varients
 ---------------------------------- */
 header.home {
