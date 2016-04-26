@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kirk the Software Developer and Blogger | also known as saricDen</title>
+    <description>You found me! Like coding and/or blogs? Welcome to my site.
+</description>
+    <link>http://saricden.com/</link>
+    <atom:link href="http://saricden.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 26 Apr 2016 11:07:32 -0700</pubDate>
+    <lastBuildDate>Tue, 26 Apr 2016 11:07:32 -0700</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>My Top 3 Web Dev Discoveries of 2015</title>
+        <description>&lt;p&gt;Well it’s officially 2016. Er, 3 days into it to be precise. Nonetheless now is as good a time as any to reflect on stuff from the previous year. Today we’ll look at: &lt;em&gt;My Top 3 Web Dev Discoveries of 2015!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note!&lt;/strong&gt; This stuff didn’t necessarily come out in 2015, I just found it then and may very well have been late to the party.&lt;/p&gt;
+
+&lt;h2&gt;1: GitHub Pages &amp;amp; Jekyll&lt;/h2&gt;
+
+&lt;p&gt;As someone who does not have millions of dollars, I’m all about super low overhead when starting a new website. I was therefore delighted to discover that GitHub offers a super straightforward way to &lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot;&gt;publish static web pages&lt;/a&gt; from your Git repositories hosted on GitHub. Just a quick push, and your website is updated. This is a beautiful way to integrate source control and simple deployment into any of your web projects in minutes.&lt;/p&gt;
+
+&lt;p&gt;The only problem that arises is that because this is static hosting (HTML, CSS, JS), you aren’t allowed to run serverside code such as PHP or Ruby to do things like talk to a database or run a CMS (content management system). HOWEVER, this doesn’t mean you can’t manage content in a very similar fashion to a CMS system. Allow me to introduce &lt;a href=&quot;https://jekyllrb.com/&quot; target=&quot;_blank&quot;&gt;Jekyll&lt;/a&gt;! Jekyll is a very easy to use, fairly structure-less (in a good way), static site generator. You create templates (much like you would for a traditional CMS) using &lt;a href=&quot;https://github.com/Shopify/liquid/wiki&quot; target=&quot;_blank&quot;&gt;Liquid&lt;/a&gt;, write posts as Markdown files, and let Jekyll mush it all together and spit out a full static website with URL endpoints for every post, page, feed, and whatever else you made templates for.&lt;/p&gt;
+
+&lt;p&gt;The best part is that Github Pages inherently supports Jekyll! This means your freely hosted site can make use of Jekyll to manage it’s content and make posting new stuff painless.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Free hosting from Github Pages paired w/ Jekyll static site generator basically makes the operating cost of a blog the cost of it’s domain name (like $12 CAD / year).&lt;/p&gt;
+
+&lt;h2&gt;2. Firebase&lt;/h2&gt;
+
+&lt;p&gt;If instead of building a blog, you’re looking to create a more intensive web app with things such as data persistence, login sessions, etc. you’re probably still shying away from the idea of free static hosting. Well fear not! &lt;a href=&quot;https://www.firebase.com/&quot;&gt;Firebase&lt;/a&gt; is an API service that enables developers to persist their app’s data as a big chunk of JSON. Tailoring the structure of the JSON object will allow you to store anything from user account info to items in a game. It will automatically generate URL endpoints so you can access your data programmatically as your JSON blob grows.&lt;/p&gt;
+
+&lt;p&gt;With this service it’s possible to build apps that are capable of securely persisting user information and whatever else you want to keep track of, without having to maintain your own backend. Granted you have less control over what goes on than if you coded the backend yourself, but you also don’t need to spend as much time worrying about security, not to mention it’s blazingly fast to setup.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Firebase is a great way to store data for your app securely and quickly, without requiring a backend. (And they have an excellent free plan!)&lt;/p&gt;
+
+&lt;p&gt;Also, the speed at which you can set it up makes it an ideal service for your next &lt;em&gt;hackathon!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;3. Apache Cordova and Ionic&lt;/h2&gt;
+
+&lt;p&gt;I have long struggled with the idea of writing a massive code base for an Android app, only to have to tear it down and re-write the whole thing when I want to port it to iOS. Not only is this time consuming from the beginning, but it also poses problems later down the road when maintaining your app (not to mention if you’re working in teams).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://cordova.apache.org/&quot; target=&quot;_blank&quot;&gt;Apache Cordova&lt;/a&gt; is a wonderful free, open source tool that enables developers to compile web code into native applications. Maintaining a single code base for your app makes it infinitely more manageable to work on by yourself, or in a team. Cordova essentially wraps your web code in a seamless browser and compiles it into an app for whatever platforms you wish to target.&lt;/p&gt;
+
+&lt;p&gt;Now while it’s true that this extra layer can damage performance, I don’t think it’s something you’ll notice or need to worry about unless you are developing a very power-hungry app such as a game running intensive graphics and/or physics engines.&lt;/p&gt;
+
+&lt;p&gt;Going hand in hand with Cordova is the &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;Ionic Framework&lt;/a&gt;. This framework gives you access to a library of modules that can be implemented in your HTML that give you many native app components such as side menus, tabs, etc. The clever thing about Ionic is it is setup to detect the OS of the device running the app and display the appropriate native UI. For example, if your app is running on iOS, the components will have an iOS ‘look and feel’ to them, whereas if you ran the app on Android, the UI would appear to be using the native Android components.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TL;DR:&lt;/strong&gt; Apache Cordova &amp;amp; the Ionic Framework enable app developers to create native-looking apps, exported to a wide range of devices, with a single code base.&lt;/p&gt;
+
+&lt;p&gt;So anyways, those are probably my top 3 discoveries of last year. Stay tuned as I’ll be throwing up some tutorials and/or more articles later on this year as I further use all of the above.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Jan 2016 00:00:00 -0800</pubDate>
+        <link>http://saricden.com/blog/2016/01/03/my-top-3-web-dev-discoveries-of-2015/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2016/01/03/my-top-3-web-dev-discoveries-of-2015/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Test Tiny Breakpoints in Chrome</title>
+        <description>&lt;p&gt;If you’re right into responsive web development it’s super likely that you’ve already encountered and solved this, but nevertheless this might be a good trick to add to your bag!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;You know how you can’t re-size the width of a Chrome window under a certain width (275 pixels wide to be exact)? This can be annoying when you’re trying to test CSS media queries if you’ve got any under that width.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Open up dev tools (Ctrl + Shift + I or Ctrl + Shift + J), make sure the dialog is part of the browser window (not opened in it’s own window), and docked to the side. You can then re-size the width of the window using the bar separating Chrome’s dev tools and the webpage.&lt;/p&gt;
+
+&lt;p&gt;Re-sizing the window this way enables you to reach widths less than 275 pixels (as of writing this the smallest width you can go appears to be 147 pixels across).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgflip.com/uhmlv.jpg&quot; class=&quot;meme&quot; alt=&quot;Nailed it.&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2015 00:00:00 -0800</pubDate>
+        <link>http://saricden.com/blog/2015/11/20/how-to-test-tiny-breakpoints-in-chrome/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/11/20/how-to-test-tiny-breakpoints-in-chrome/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>My Beef With Libraries &amp; Frameworks</title>
+        <description>&lt;p&gt;Let me get one thing straight. I don’t think libraries or frameworks are bad. Not by any means.&lt;/p&gt;
+
+&lt;p&gt;Libraries can be powerful tools for providing generic reusable functionality, and frameworks offer the additional benefit of a provided structural paradigm for your code (pretty much essential when working in teams).&lt;/p&gt;
+
+&lt;p&gt;I do not think however, they should be used by beginner programmers.&lt;/p&gt;
+
+&lt;p&gt;The reason I take issue with beginners using them is that because they simplify what’s going on in the background, there isn’t an obvious need to learn how it actually works.&lt;/p&gt;
+
+&lt;p&gt;A brilliant site that is full of examples for jQuery is &lt;a href=&quot;http://youmightnotneedjquery.com/&quot;&gt;youmightnotneedjquery.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The problem with not understanding the fundamentals of anything is when it comes time to think outside the box, it will be very hard to do so.&lt;/p&gt;
+
+&lt;p&gt;I myself experienced this by learning how to do database joins with &lt;a href=&quot;http://propelorm.org/&quot;&gt;Propel ORM&lt;/a&gt; instead of raw SQL. While it worked at the time, when I was faced with a situation where raw SQL joins were required it was very challenging.&lt;/p&gt;
+
+&lt;p&gt;I guess my sentiment here is that if you’re doing something you haven’t done before, try to figure it out without any helpers first. Get a sense for what’s actually going on in the background.&lt;/p&gt;
+
+&lt;p&gt;There’s little harm in using helper tools when you know what they’re doing and it saves you time, but the helper tools should always be learned second.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Aug 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/08/23/my-beef-with-libraries-frameworks/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/08/23/my-beef-with-libraries-frameworks/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Box Model Debugging Trick</title>
+        <description>&lt;p&gt;A friend of at work used to always throw outlines on stuff when she wanted to debug something that wasn’t quite right with the element’s box model (margin, padding, border).&lt;/p&gt;
+
+&lt;p&gt;This is an extension of that trick, just throw this snippet anywhere in your stylesheet and it works like a charm:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;outline&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hover your cursor over anything and it’ll outline it and help you pinpoint whatever isn’t picking up properly.&lt;/p&gt;
+
+&lt;p&gt;Shout out to &lt;a href=&quot;http://staciedaponte.net/&quot; target=&quot;_blank&quot;&gt;Stacie DaPonte&lt;/a&gt; for the original outline trick!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jul 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/07/26/box-model-debugging-trick/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/07/26/box-model-debugging-trick/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Why Flash (Was) Great</title>
+        <description>&lt;p&gt;I’m all for open standards and what not, but before Flash is gone I want to make a few points as to why it was brilliant.&lt;/p&gt;
+
+&lt;p&gt;As a tool for creating rich interactive web applications (particularly games) Flash really was in a class of it’s own.&lt;/p&gt;
+
+&lt;p&gt;A single tool in which you could make beautiful graphics, animate them, dynamically integrate sound, and code your logic.
+That’s a pretty amazing combo. All in one place. Personally I don’t think you &lt;em&gt;need&lt;/em&gt; more than that.&lt;/p&gt;
+
+&lt;p&gt;Keeping things loosely coupled though, is 9 times out of 10 a best practice.
+Say you didn’t like the drawing tools in Flash and you’d rather use something else.
+You’d probably disagree with me about Flash’s excellence.&lt;/p&gt;
+
+&lt;p&gt;Ultimately HTML5 is the way to go. The simple fact that you don’t need to pay makes HTML5 far more accessible.
+Not to mention the inherit support to create cross platform, mobile friendly applications.&lt;/p&gt;
+
+&lt;p&gt;There are already great strides in HTML5 game development, and that’s only going to continue with time.
+A perfect example is &lt;a href=&quot;http://phaser.io/&quot;&gt;Phaser&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Perhaps Flash will find a new niche. Even if it doesn’t however, I hope the world will remember it fondly.&lt;/p&gt;
+
+&lt;p&gt;Thank you and good night!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Mar 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/03/26/why-flash-was-great/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/03/26/why-flash-was-great/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>The Golden Rule of CSS Scalability</title>
+        <description>&lt;p&gt;On the face of it, CSS may not seem like a particularly complicated beast. Change a few font colours, position some boxes, and put some borders on stuff. Easy right?&lt;/p&gt;
+
+&lt;p&gt;Unfortunately not so much. Even putting aside responsiveness, good user experience, and browser compatibility there’s still a lot one must consider when writing &lt;em&gt;good&lt;/em&gt; CSS.&lt;/p&gt;
+
+&lt;p&gt;One of the most important things to keep in mind right from the get go is scalability.&lt;/p&gt;
+
+&lt;p&gt;What do I mean when I say scalability (in terms of CSS)?&lt;/p&gt;
+
+&lt;p&gt;I mean that as the project you’re working on expands in size and complexity, you don’t need to write loads of extra selectors and/or tack on lines upon lines of extra shit to get things looking right. At the end of the day you want your CSS to be as simple as possible, and still achieve the style you’re going for.&lt;/p&gt;
+
+&lt;p&gt;Okay lovely, what’s this golden rule already?&lt;/p&gt;
+
+&lt;p&gt;I think the trick is to:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Style majority first. Only be specific when you need to be.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Admittedly, this can be difficult to maintain in practise. It’s very easy to think only of the end result, and not factor in potential (perhaps inevitable) changes, and scope additions.&lt;/p&gt;
+
+&lt;p&gt;A couple of things to establish before building anything: figure out consistent fonts for headings, navigation elements, text, and so on. Identify common layout patterns, and stick to them.&lt;/p&gt;
+
+&lt;p&gt;Once you’ve located the common design patterns that are consistent throughout (hopefully) several areas, build those first. Then if the homepage has a big header image, or there’s a page with some special layout, write specific selectors for those edge cases.&lt;/p&gt;
+
+&lt;p&gt;If you’re working with a designer, the best thing you can do is talk this stuff out. If you’re designing and developing, make sure you think of the re-usability of your components / styles. Try to think of potential future updates. Try not to deviate drastically from the base styles.&lt;/p&gt;
+
+&lt;p&gt;I think the reasoning here is pretty sound, but I’m not much of a designer, so feel free to tell me off if I’m skipping over all kinds of important design concepts.&lt;/p&gt;
+
+&lt;p&gt;Good day!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Mar 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/03/26/the-golden-rule-of-css-scalability/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/03/26/the-golden-rule-of-css-scalability/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Ventures into HTTP</title>
+        <description>&lt;p&gt;At the moment I’m working on &lt;a href=&quot;/project/crawlr&quot; target=&quot;_blank&quot;&gt;a side project&lt;/a&gt; that was recently rendered completely redundant by my co-worker pointing out that Google is a thing.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless I plan on seeing it through to completion because I’m very curious about web scraping, and I want to learn more about HTTP, the nature of the internet, and regular expressions.&lt;/p&gt;
+
+&lt;p&gt;I’ve therefore been doing a fair bit of reading about HTTP status codes, response types, and so on. I was rather surprised to find that the things servers respond with aren’t always in a consistent format.&lt;/p&gt;
+
+&lt;p&gt;My guess is this has to do with servers being independently operated, with so many varieties of possible software stacks and configurations. Any computer can technically act as a server.&lt;/p&gt;
+
+&lt;p&gt;Kind of a bummer for the client though.&lt;/p&gt;
+
+&lt;p&gt;To put it another way, every time my computer asks the internet for something, the internet returns something, but the way that something is described is kind of vague.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/saricden/crawlr/commit/a995ce99332cffe8d66da0becb403b1d8fc2f11c?diff=unified#diff-2073e06926cc25d60c62712e3f9c798eR97&quot; target=&quot;_blank&quot;&gt;This is an example of what I’m on about.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Note the use of &lt;em&gt;strpos&lt;/em&gt; to match ‘html’ anywhere in the string.&lt;/p&gt;
+
+&lt;p&gt;My original plan was to just check if the content type was equal to ‘text/html’, but after a bit of testing I quickly discovered that a response can be described as HTML by a variety of different strings.&lt;/p&gt;
+
+&lt;p&gt;Anyways, I’ll conclude my rambling there. I’m beginning to feel a bit like &lt;a href=&quot;http://en.wikipedia.org/wiki/James_May&quot; target=&quot;_blank&quot;&gt;James May&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Peace out homies!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 18 Mar 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/03/18/ventures-into-http/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/03/18/ventures-into-http/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World!</title>
+        <description>&lt;p&gt;What a generic start to my blog.&lt;/p&gt;
+
+&lt;p&gt;I wonder how many other programmers started their blogs off with a post with the exact same title as this? &lt;a href=&quot;https://www.google.ca/search?q=hello+world&quot; target=&quot;_blank&quot;&gt;Googling it&lt;/a&gt; didn’t really help. Oh well, just curious.&lt;/p&gt;
+
+&lt;p&gt;If you’re reading this wondering why I’m ranting about how lame this post is, that’s great! It’s lame because &lt;a href=&quot;http://en.wikipedia.org/wiki/%22Hello,_World!%22_program&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Hello World&lt;/em&gt;&lt;/a&gt; is a traditional first program to write, and is something every code monkey has probably written in some form or another.&lt;/p&gt;
+
+&lt;p&gt;If I were to label myself and my intention for this blog with two words those words would be &lt;em&gt;curious&lt;/em&gt; and &lt;em&gt;creative&lt;/em&gt;. Plus you know: tallish, sleep deprived, unintentionally judgey, and reasonable draw-er.&lt;/p&gt;
+
+&lt;p&gt;If nothing else I hope my writing inspires curiosity and critical thinking, and at the end of the day: questions.&lt;/p&gt;
+
+&lt;p&gt;Kirk out.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 17 Mar 2015 00:00:00 -0700</pubDate>
+        <link>http://saricden.com/blog/2015/03/17/hello-world/</link>
+        <guid isPermaLink="true">http://saricden.com/blog/2015/03/17/hello-world/</guid>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Crawlr</title>
+        <description>&lt;p&gt;A web crawler built to find my long lost flash games.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Mar 2015 00:00:00 -0800</pubDate>
+        <link>http://saricden.com/project/crawlr/</link>
+        <guid isPermaLink="true">http://saricden.com/project/crawlr/</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+  </channel>
+</rss>

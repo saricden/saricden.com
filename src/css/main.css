@@ -1,0 +1,470 @@
+/* Base styles
+-------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 51px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1em;
+}
+h1 {
+  font-size: 46px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a, p {
+  font-family: sans-serif;
+}
+article p {
+  line-height: 1.4em;
+}
+
+/* General reusable
+-------------------------------- */
+.clr:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.vc-container {
+  display: table;
+}
+.vc-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  padding: 10px 25px;
+  border: solid 1px blue;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.textcenter {
+  text-align: center;
+}
+.centerblock {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.col {
+  display: block;
+  float: left;
+}
+.col.revfl {
+  float: right;
+}
+.four { width: 33%; }
+.six { width: 50%; }
+.eight { width: 66%; }
+nav.global {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10px;
+  border-bottom: solid 1px #CCC;
+  color: #000;
+  background-color: #FFF;
+}
+nav.global a, a.x {
+  display: block;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #000;
+}
+nav.global a.search, nav.global a.mobile-nav {
+  float: right;
+  cursor: pointer;
+}
+nav.global a.mobile-nav, a.x {
+  display: none;
+}
+nav.global img, a.x img {
+  vertical-align: middle;
+}
+a.glass-btn {
+  display: inline-block;
+  margin: 3px;
+  padding: 10px 20px;
+  border: solid 1px #000;
+  border-radius: 3px;
+  color: #000;
+}
+img.meme {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 35px auto;
+}
+
+/* Search results
+-------------------------------- */
+.results {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+}
+.results li, .results li a {
+  display: block;
+}
+.results li {
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+.results li a {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Aside modules
+-------------------------------- */
+.aside-module {
+  margin-bottom: 20px;
+}
+.aside-module header {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #CCC;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+.aside-module p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+/* Subscribe module
+-------------------------------- */
+.subscribe input {
+  display: block;
+  width: calc(100% - 22px);
+  height: 30px;
+  line-height: 30px;
+  margin: 0 10px;
+  padding: 0;
+  border: solid 1px #888;
+  text-align: center;
+}
+.subscribe input[type="text"] {
+  background-color: #FFF;
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  outline: none;
+}
+.subscribe input[type="submit"] {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Fake ad variants (temp)
+-------------------------------- */
+.mockad {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  width: 100%;
+  background-color: #EEE;
+  text-align: center;
+}
+.mockad.sm {
+  max-width: 250px;
+  height: 90px;
+  line-height: 90px;
+}
+.mockad.sq {
+  max-width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+.mockad.wide {
+  max-width: 250px;
+  height: 120px;
+  line-height: 120px;
+}
+.ad-note {
+  display: block;
+  max-width: 260px;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* Real ads
+-------------------------------- */
+.adsbygoogle {
+  margin-left: 10px;
+}
+
+/* Article list
+-------------------------------- */
+.article-list {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+.article-list li {
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+.article-list li p {
+  margin: 0;
+  margin-top: 2px;
+}
+.article-list .no {
+  display: table;
+  width: 50px;
+  height: 50px;
+  line-height: 1em;
+  float: left;
+  margin-right: 10px;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 10px;
+  text-align: right;
+  color: #FFF;
+  background-color: #AAA;
+  font-family: sans-serif;
+}
+.article-list .no > div {
+  display: table-cell;
+  vertical-align: bottom;
+}
+.article-list .no span {
+  display: block;
+  padding-top: 15px;
+  border-top: solid 1px #FFF;
+  font-size: 30px;
+}
+
+
+/* Homepage variants
+-------------------------------- */
+.hm-title {
+  width: 95%;
+  max-width: 450px;
+  height: calc(100vh - 51px);
+  float: left;
+  margin-left: 40px;
+  color: #000;
+  text-align: center;
+}
+.hm-title img {
+  width: 75px;
+  stroke: #FFF;
+}
+.hm-title h1, .hm-title p {
+  margin: 30px 0;
+}
+.hm-title p {
+  font-size: 20px;
+}
+.hm-bg {
+  background: #EEE url(/src/img/me-reduced.png) no-repeat bottom right;
+  background-size: auto 90%;
+}
+
+/* Listing page variants
+-------------------------------- */
+.li-title {
+  background-color: #EEE;
+  padding: 80px 20px;
+}
+.li-title h1 {
+  width: 100%;
+  max-width: 600px;
+  line-height: 1.5em;
+  margin: 0 auto;
+  font-size: 34px;
+  text-align: center;
+}
+.li-list, .li-aside {
+  padding-top: 10px;
+}
+.li-list {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.li-aside {
+  border-left: solid 1px #CCC;
+}
+
+.test-menu, .search-panel {
+  width: 0;
+  height: 0;
+  border-bottom-left-radius: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+
+  transition: border-bottom-left-radius 0.6s, width 0.2s, height 0.4s;
+}
+
+.test-menu.open, .search-panel.open {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.search-panel input {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 0;
+  border-bottom: solid 2px #AAA;
+  outline: none;
+  font-size: 18px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.search-panel.open input {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.6s, opacity 0.6s;
+  transition-delay: 0.6s;
+}
+
+/* messy, to be cleaned.. */
+a.x {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+}
+
+nav.global a.page-link.open, a.open.x {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+
+  transition: opacity 0.6s, visibility 0.6s;
+}
+
+a.open.x {
+  display: block;
+  width: 30px;
+  top: 0;
+  left: auto;
+  right: 15px;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 820px) {
+  .li-list, .li-aside {
+    float: none;
+    clear: both;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+  }
+  .li-aside.ad, .ad-note {
+    text-align: center;
+  }
+  .ad-note {
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .btn {
+    width: auto;
+    max-width: none;
+  }
+
+  nav.global {
+    padding: 0;
+  }
+
+  .hm-bg {
+    height: calc(100vh - 51px);
+    background-position: bottom center;
+    background-size: auto 40%;
+  }
+  .hm-title {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 60%;
+    margin: 0 auto;
+  }
+  .hm-title h1 {
+    max-width: none;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  a.open.x {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  nav.global a {
+    display: none;
+  }
+  nav.global a.logo, nav.global a.search, nav.global a.mobile-nav, nav.global a.page-link {
+    display: block;
+  }
+  nav.global a.page-link, a.x {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+  }
+
+  .li-title {
+    padding: 40px 20px;
+  }
+  .li-title h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .hm-title img {
+    display: none;
+  }
+}
