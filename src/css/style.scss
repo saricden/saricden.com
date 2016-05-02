@@ -47,6 +47,13 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.4);
   border-color: transparent;
 }
+blockquote {
+  p {
+    margin-bottom: 10px;
+    font-size: 90%;
+    font-style: italic;
+  }
+}
 
 /* Bootstrap overrides
 ---------------------------------- */
@@ -241,6 +248,10 @@ a:hover {
   }
 }
 
+.row.spaced {
+  margin: 40px 0;
+}
+
 .social-links {
   margin-bottom: 50px;
   padding: 0;
@@ -294,6 +305,21 @@ a:hover {
         }
       }
     }
+  }
+}
+
+.yt16-9 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
