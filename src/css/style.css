@@ -5852,6 +5852,11 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.4);
   border-color: transparent; }
 
+blockquote p {
+  margin-bottom: 10px;
+  font-size: 90%;
+  font-style: italic; }
+
 /* Bootstrap overrides
 ---------------------------------- */
 .navbar-fixed {
@@ -6014,6 +6019,9 @@ a:hover {
   .panel h2 {
     font-size: 26px; }
 
+.row.spaced {
+  margin: 40px 0; }
+
 .social-links {
   margin-bottom: 50px;
   padding: 0;
@@ -6055,6 +6063,18 @@ a:hover {
       text-align: center; }
       .tvbox a div h3 small {
         color: inherit; }
+
+.yt16-9 {
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 56.25%;
+  height: 0; }
+  .yt16-9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /* Page-specific varients
 ---------------------------------- */
