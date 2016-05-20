@@ -1,5 +1,0 @@
-/* Clips the height of some element */
-@mixin limit-height($px) {
-  height: $px;
-  overflow: hidden;
-}
