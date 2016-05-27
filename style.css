@@ -1,0 +1,116 @@
+/* Base styling
+--------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 25px;
+  padding-left: 250px;
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(100, 100, 255, 0.45), 
+      rgba(100, 100, 255, 1)
+    ),
+    /* bottom, image */
+    url(https://images.unsplash.com/10/wii.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=38ab2a46e8621c8c23f5e4f10dcc7017);
+  background-size: cover;
+}
+
+h1, h2, h3, p {
+  color: #FFF;
+  font-family: sans-serif;
+  text-shadow: 1px 1px 2px #000;
+}
+h1 {
+  font-size: 40px;
+}
+p {
+  font-size: 20px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Reusable classes
+--------------------------------- */
+.fullpanel {
+  /* height handled by JS */
+}
+.fullcenter-wrap {
+  display: table;
+  width: 100%;
+}
+.fullcenter {
+  display: table-cell;
+  vertical-align: middle;
+}
+.smallpage, .page {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px;
+}
+.smallpage {
+  max-width: 600px;
+}
+.page {
+  max-width: 1000px;
+}
+
+nav.leftnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: yellow;
+}
+
+nav.leftnav strong {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+nav.leftnav strong .logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 15px auto;
+}
+
+nav.leftnav a {
+  display: block;
+  margin: 15px;
+  padding: 15px;
+  border: solid 2px #000;
+  border-right: 0;
+  color: yellow;
+  background-color: #000;
+  text-align: right;
+  transition: color 0.6s, background-color 0.4s;
+}
+
+nav.leftnav a:focus,
+nav.leftnav a.active {
+  color: #000;
+  background-color: yellow;
+}
+
+
+/* Absolute styling
+--------------------------------- */
+/*#homehead {
+  max-width: 500px;
+
+}*/
