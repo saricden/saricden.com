@@ -5,21 +5,6 @@ html, body {
   padding: 0;
 }
 
-body {
-  box-sizing: border-box;
-  padding: 25px;
-  padding-left: 250px;
-  background: 
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(100, 100, 255, 0.45), 
-      rgba(100, 100, 255, 1)
-    ),
-    /* bottom, image */
-    url(https://images.unsplash.com/10/wii.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=38ab2a46e8621c8c23f5e4f10dcc7017);
-  background-size: cover;
-}
-
 h1, h2, h3, p {
   color: #FFF;
   font-family: sans-serif;
@@ -63,6 +48,9 @@ a:hover {
 .page {
   max-width: 1000px;
 }
+.navpush {
+  padding-left: 250px;
+}
 
 nav.leftnav {
   position: fixed;
@@ -70,7 +58,7 @@ nav.leftnav {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: yellow;
+  background-color: rgba(255, 100, 255, 0.6);
 }
 
 nav.leftnav strong {
@@ -104,13 +92,20 @@ nav.leftnav a {
 nav.leftnav a:focus,
 nav.leftnav a.active {
   color: #000;
-  background-color: yellow;
+  background-color: transparent;
 }
 
 
 /* Absolute styling
 --------------------------------- */
-/*#homehead {
-  max-width: 500px;
-
-}*/
+#homehead {
+ background: 
+  /* top, transparent red, faked with gradient */ 
+  linear-gradient(
+    rgba(100, 100, 255, 0.45), 
+    rgba(100, 100, 255, 1)
+  ),
+  /* bottom, image */
+  url(https://images.unsplash.com/10/wii.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=38ab2a46e8621c8c23f5e4f10dcc7017);
+  background-size: cover;
+}
