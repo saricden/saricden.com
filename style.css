@@ -109,3 +109,7 @@ nav.leftnav a.active {
   url(https://images.unsplash.com/10/wii.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=38ab2a46e8621c8c23f5e4f10dcc7017);
   background-size: cover;
 }
+
+#about {
+  background-color: rgba(100, 100, 255, 1);
+}
