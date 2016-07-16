@@ -70,6 +70,7 @@ header.top:after, main.project-grid:after {
   header.top h1, header.top p {
     width: 100%;
     text-align: left;
+    padding: 10px;
   }
   header.top h1 {
     padding-bottom: 0;
