@@ -1,0 +1,80 @@
+/* Default styles
+-------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, p {
+  font-family: sans-serif;
+}
+h1, p {
+  font-size: 17px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+/* Reusable classes
+-------------------------------- */
+header.top h1, header.top p {
+  display: block;
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 40px;
+}
+header.top p {
+  text-align: right;
+}
+main.project-grid a {
+  display: block;
+  float: left;
+  width: 16.6666667%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+main.project-grid a img {
+  display: block;
+  width: 100%;
+  border: solid 1px #333;
+}
+header.top:after, main.project-grid:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* Specific stuff
+-------------------------------- */
+
+/* Media queries
+-------------------------------- */
+@media only screen and (max-width: 940px) {
+  main.project-grid a {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 770px) {
+  main.project-grid a {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 585px) {
+  main.project-grid a {
+    width: 33%;
+  }
+}
+@media only screen and (max-width: 510px) {
+  header.top h1, header.top p {
+    width: 100%;
+    text-align: left;
+  }
+  header.top h1 {
+    padding-bottom: 0;
+  }
+  main.project-grid a {
+    width: 50%;
+  }
+}
