@@ -1,81 +1,118 @@
-/* Default styles
+/* Base styles
 -------------------------------- */
 html, body {
   margin: 0;
   padding: 0;
-}
-
-h1, h2, h3, h4, p {
   font-family: sans-serif;
 }
-h1, p {
-  font-size: 17px;
-  font-weight: 100;
-  letter-spacing: 1px;
+
+body {
+  background-color: #EEE;
 }
 
-/* Reusable classes
--------------------------------- */
-header.top h1, header.top p {
-  display: block;
-  float: left;
-  width: 50%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 20px 40px;
-}
-header.top p {
-  text-align: right;
-}
-main.project-grid a {
-  display: block;
-  float: left;
-  width: 16.6666667%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px;
-}
-main.project-grid a img {
-  display: block;
-  width: 100%;
-  border: solid 1px #333;
-}
-header.top:after, main.project-grid:after {
+/* Common Styles */
+.site-title:after, .content:after, ul.content-list:after {
   display: block;
   content: "";
   clear: both;
 }
 
-/* Specific stuff
+/* Header */
+.site-title {
+  padding: 30px 0;
+  background-color: #319B23;
+  color: #FFF;
+}
+
+.site-title .title {
+  width: 70%;
+  float: right;
+}
+
+/* The main content wrapper */
+.content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+} 
+
+/* Content section & sidebar */
+.side-column {
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+.side-column img {
+  display: inline-block;
+  width: 180px;
+  height: auto;
+  margin-top: -90px;
+  margin-bottom: 22px;
+  border-radius: 100%;
+  border: solid 8px #EEE;
+}
+.side-column a {
+  display: block;
+  width: 70%;
+  box-sizing: border-box;
+  margin: 5px auto;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #CCC;
+  text-align: left;
+}
+
+.boxlist {
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.boxlist .box {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #FFF;
+}
+.boxlist .box header {
+  padding: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #DDD;
+}
+.boxlist .box .inner {
+  padding: 7px;
+}
+
+/* Reusable elements
 -------------------------------- */
 
-/* Media queries
--------------------------------- */
-@media only screen and (max-width: 940px) {
-  main.project-grid a {
-    width: 20%;
-  }
+/* Content lists */
+ul.content-list {
+  padding: 0;
+  bullet-style: none;
 }
-@media only screen and (max-width: 770px) {
-  main.project-grid a {
-    width: 25%;
-  }
+ul.content-list li {
+  display: block;
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: center;
 }
-@media only screen and (max-width: 585px) {
-  main.project-grid a {
-    width: 33%;
-  }
+ul.content-list.three-cols li {
+  width: 33%;
 }
-@media only screen and (max-width: 510px) {
-  header.top h1, header.top p {
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-  }
-  header.top h1 {
-    padding-bottom: 0;
-  }
-  main.project-grid a {
-    width: 50%;
-  }
+ul.content-list li a {
+  display: block;
+}
+ul.content-list li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 7px;
+}
+ul.content-list li a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
