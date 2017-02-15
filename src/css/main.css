@@ -116,3 +116,78 @@ ul.content-list li a p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Media queries
+-------------------------------- */
+@media screen and (max-width: 680px) {
+  body {
+    padding-top: 75px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .site-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .site-title .title {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  /* Side menu */
+  .side-column {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #319B23;
+  }
+  .side-column img {
+    margin-top: 22px;
+  }
+
+  /* Content section */
+  .boxlist {
+    width: 100%;
+    padding: 15px;
+  }
+  .boxlist .box {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* Content columns */
+  ul.content-list li {
+    width: 25%;
+  }
+  ul.content-list.three-cols li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* Content columns */
+  ul.content-list li {
+    width: 33%;
+  }
+  ul.content-list.three-cols li {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  /* Content columns */
+  ul.content-list li {
+    width: 50%;
+  }
+}
