@@ -14,7 +14,38 @@
   </head>
 
   <body>
-    {{ content }}
+    <header class="site-title">
+      <div class="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="title">
+        <div>The projects of</div>
+        <h1>
+          Kirk M.
+          <small>@saricDen</small>
+        </h1>
+      </div>
+    </header>
+    <main class="content">
+      <div class="side-column">
+        <img src="http://m.c.lnkd.licdn.com/media/p/2/005/06f/000/1083da2.jpg" alt="Kirk M. (@saricDen)">
+        <a href>(email)</a>
+        <a href>(phone)</a>
+        <a href>@saricden</a>
+        <a href>Linkedin</a>
+        <div class="mobile-close">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <div class="boxlist">
+        {{ content }}
+      </div>
+    </main>
+
+    <div class="overlay"></div>
 
     <script type="text/javascript" src="/src/js/main.js"></script>
   </body>
