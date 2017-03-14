@@ -3,6 +3,7 @@ layout: default
 title:  "Golf Canada Score Centre - Website Information"
 date:   2016-06-19 11:32:22
 categories: posts websites
+order: 1
 permalink: /websites/golf-canada/
 ---
 <div class="box">
