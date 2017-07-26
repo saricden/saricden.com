@@ -1,287 +1,86 @@
 /* Base styles
--------------------------------- */
+----------------------------- */
 html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-
 body {
   background-color: #EEE;
 }
 
-/* Common Styles */
-.site-title:after, .content:after, ul.content-list:after {
-  display: block;
-  content: "";
-  clear: both;
+/* Headings */
+h1 {
+  margin: 0;
 }
 
-/* Header */
-.site-title {
-  padding: 30px 0;
-  background-color: #319B23;
-  color: #FFF;
-}
-
-.site-title .title {
-  width: 70%;
-  float: right;
-}
-
-/* The mobile menu button & the close side menu button */
-.site-title .mobile-menu,
-.side-column .mobile-close {
-  display: none;
-  cursor: pointer;
-}
-
-/* The main content wrapper */
-.content {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-} 
-
-/* Content section & sidebar */
-.side-column {
-  width: 30%;
-  float: left;
-  text-align: center;
-  z-index: 2;
-}
-.side-column img {
-  display: inline-block;
-  width: 180px;
-  height: auto;
-  margin-top: -90px;
-  margin-bottom: 22px;
-  border-radius: 100%;
-  border: solid 8px #EEE;
-}
-.side-column a {
-  display: block;
-  width: 70%;
-  box-sizing: border-box;
-  margin: 5px auto;
-  padding: 7px;
-  border-radius: 5px;
-  background-color: #CCC;
-  text-align: left;
-}
-
-.boxlist {
-  width: 70%;
-  float: left;
-  box-sizing: border-box;
-  padding: 30px;
-}
-.boxlist .box {
-  margin-bottom: 30px;
-  border-radius: 5px;
-  background-color: #FFF;
-}
-.boxlist .box header {
-  padding: 7px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: #DDD;
-}
-.boxlist .box .inner {
-  padding: 7px;
-}
-
-/* Reusable elements
--------------------------------- */
-
-/* Content lists */
-ul.content-list {
-  padding: 0;
-  bullet-style: none;
-}
-ul.content-list li {
-  display: block;
-  float: left;
-  width: 20%;
-  box-sizing: border-box;
-  padding: 7px;
-  text-align: center;
-}
-ul.content-list.three-cols li {
-  width: 33%;
-}
-ul.content-list li a {
-  display: block;
-}
-ul.content-list li img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-bottom: 7px;
-}
-ul.content-list li a p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Overlay */
-div.overlay {
+/* Navbar */
+nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  visibility: hidden;
-  opacity: 0;
-  z-index: 1;
-
-  transition: visibility 0.4s, opacity 0.4s;
+  background-color: #FFF;
+  color: #000;
 }
-div.overlay.open {
-  visibility: visible;
-  opacity: 1;
+nav:after {
+  display: block;
+  content: "";
+  clear: both;
 }
-
-/* Media queries
--------------------------------- */
-@media screen and (max-width: 680px) {
-  body {
-    padding-top: 75px;
-  }
-
-  h1 {
-    margin: 0;
-  }
-
-  .site-title {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .site-title .title {
-    width: auto;
-    float: none;
-    text-align: center;
-  }
-
-  .site-title .mobile-menu {
-    position: relative;
-    width: 40px;
-    float: left;
-    display: block;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-
-  .site-title .mobile-menu .bar {
-    display: block;
-    width: 100%;
-    height: 5px;
-    border-radius: 3px;
-    background-color: #FFF;
-  }
-
-  .site-title .mobile-menu .bar:nth-child(2),
-  .site-title .mobile-menu .bar:nth-child(3) {
-    margin-top: 8px;
-  }
-
-  /* Side menu */
-  .side-column {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    background-color: #EEE;
-
-    transition: left 0.4s;
-  }
-  .side-column.open {
-    left: 0;
-  }
-  .side-column img {
-    width: 40%;
-    margin-top: 22px;
-  }
-  .side-column .mobile-close {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-  }
-  .side-column .mobile-close .bar {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    top: 16px;
-    left: 0;
-    border-radius: 3px;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
-    background-color: #AAA;
-  }
-  .side-column .mobile-close .bar:nth-child(1) {
-    -ms-transform: rotate(135deg); /* IE 9 */
-    -webkit-transform: rotate(135deg); /* Chrome, Safari, Opera */
-    transform: rotate(135deg);
-  }
-
-  /* Content section */
-  .boxlist {
-    width: 100%;
-    padding: 15px;
-  }
-  .boxlist .box {
-    margin-bottom: 15px;
-  }
+nav h1 a {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 13px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+nav h1 a small {
+  font-size: 18px;
+  color: #555;
+}
+nav ul {
+  display: block;
+  float: right;
+  margin: 0;
+  list-style: none;
+}
+nav ul li {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #000;
+  transition: color 0.4s, background-color 0.4s;
+}
+nav ul li a:hover {
+  color: #FFF;
+  background-color: #000;
 }
 
-@media screen and (max-width: 620px) {
-  /* Content columns */
-  ul.content-list li {
-    width: 25%;
-  }
-  ul.content-list.three-cols li {
-    width: 50%;
-  }
+/* Reusable classes
+----------------------------- */
+.center-title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-@media screen and (max-width: 420px) {
-  /* Content columns */
-  ul.content-list li {
-    width: 33%;
-  }
-  ul.content-list.three-cols li {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  .site-title .title div {
-    font-size: 0.9em;
-  }
-  .site-title .title {
-    margin-top: 6px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  /* Content columns */
-  ul.content-list li {
-    width: 50%;
-  }
+/* Single-use classes
+----------------------------- */
+#home {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
