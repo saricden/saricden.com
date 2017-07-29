@@ -82,6 +82,7 @@ nav .closebtn span:nth-of-type(2) {
 }
 nav ul {
   position: fixed;
+  z-index: 3;
   top: 0;
   right: -200px;
   display: block;
@@ -133,4 +134,21 @@ nav ul li a:hover {
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+#overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s, visibility 0.3s;
+}
+#overlay.open {
+  opacity: 0.5;
+  visibility: visible;
 }
