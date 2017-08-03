@@ -83,7 +83,7 @@ nav ul {
   position: fixed;
   z-index: 3;
   top: 0;
-  right: -200px;
+  right: -215px;
   display: block;
   width: 200px;
   height: 100%;
@@ -137,7 +137,7 @@ nav ul li a:hover {
         rgba(0, 0, 0, 0.9), 
         rgba(0, 0, 0, 0.9)
     ),
-    #CCC url(/src/img/home-bg.jpg) no-repeat bottom right;
+    #CCC url(/src/img/home-bg.jpg) no-repeat bottom center;
   background-size: cover;
 }
 #overlay {
@@ -156,4 +156,12 @@ nav ul li a:hover {
 #overlay.open {
   opacity: 0.5;
   visibility: visible;
+}
+
+/* Media queries
+----------------------------- */
+@media only screen and (max-width: 552px) {
+  .titlebox {
+    text-align: center;
+  }
 }
