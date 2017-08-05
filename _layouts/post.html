@@ -1,9 +1,16 @@
 ---
 layout: default
 ---
-<div class="box">
-  <header>{{ page.title }}</header>
-  <div class="inner">
+<header class="banner">
+  <h1>Kirk's Blog</h1>
+  <p>Programming, life, and everything in-between.</p>
+</header>
+
+<main class="contentbox">
+  <article class="content">
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date }}">Posted on {{ page.date | date: '%B %d, %Y' }}</time>
+    <hr>
     {{ content }}
-  </div>
-</div>
+  </article>
+</main>

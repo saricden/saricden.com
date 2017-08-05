@@ -113,8 +113,18 @@ nav ul li a:hover {
   color: #FFF;
 }
 
+/* Page articles */
+article {
+  padding: 20px;
+  background-color: #FFF;
+}
+article time {
+  font-style: italic;
+}
+
 /* Reusable classes
 ----------------------------- */
+/* Homepage title box */
 .titlebox {
   position: absolute;
   top: 40%;
@@ -122,6 +132,30 @@ nav ul li a:hover {
   max-width: 553px;
   box-sizing: border-box;
   padding: 13px;
+}
+
+/* Page header banner */
+.banner {
+  padding: 30px;
+  padding-top: 77px;
+  color: #FFF;
+  background-color: #43A047;
+  text-align: center;
+}
+
+/* Content box */
+.contentbox {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Article snippet */
+article.snippet {
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 /* Single-use classes
