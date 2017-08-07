@@ -1,10 +1,11 @@
 ---
 layout: default
-title:  "Skateview - Website Information"
+title:  "Skateview"
 date:   2016-06-19 11:32:22
 categories: posts websites
 order: 2
 permalink: /websites/skateview/
+listImg: /src/img/website-screens-square/skateview.jpg
 ---
 <div class="box">
   <header>{{ page.title }}</header>

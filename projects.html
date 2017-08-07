@@ -1,0 +1,21 @@
+---
+layout: default
+title: Projects - saricDen
+permalink: /projects/
+---
+<header class="banner">
+  <h1>Projects</h1>
+  <p>The stuff I've worked on.</p>
+</header>
+
+<main class="contentbox">
+  <div class="website-container">
+    <h2>Websites</h2>
+    {% for post in site.categories.websites %}
+      <a href="{{ post.url }}" class="website">
+        <img src="{{ post.listImg }}" alt>
+        <span>{{ post.title }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</main>

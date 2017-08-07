@@ -158,6 +158,35 @@ article.snippet {
   margin-bottom: 10px;
 }
 
+/* Website project snippet */
+.website-container:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+a.website {
+  display: block;
+  float: left;
+  width: 21%;
+  box-sizing: border-box;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  padding: 10px;
+  background-color: #FFF;
+  text-align: center;
+}
+a.website img {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+a.website span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Single-use classes
 ----------------------------- */
 #home {
@@ -194,8 +223,17 @@ article.snippet {
 
 /* Media queries
 ----------------------------- */
+@media only screen and (max-width: 800px) {
+  a.website {
+    width: 30%;
+  }
+}
+
 @media only screen and (max-width: 552px) {
   .titlebox {
     text-align: center;
+  }
+  a.website {
+    width: 49%;
   }
 }

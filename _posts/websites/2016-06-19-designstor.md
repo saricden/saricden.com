@@ -1,10 +1,11 @@
 ---
 layout: default
-title:  "Designstor - Website Information"
+title:  "Designstor"
 date:   2016-06-19 11:32:22
 categories: posts websites
 order: 3
 permalink: /websites/designstor/
+listImg: /src/img/website-screens-square/designstor.jpg
 ---
 <div class="box">
   <header>{{ page.title }}</header>

@@ -1,10 +1,11 @@
 ---
 layout: default
-title:  "Golf Canada Score Centre - Website Information"
+title:  "Golf Canada Score Centre"
 date:   2016-06-19 11:32:22
 categories: posts websites
 order: 1
 permalink: /websites/golf-canada/
+listImg: /src/img/website-screens-square/golf-canada.jpg
 ---
 <div class="box">
   <header>{{ page.title }}</header>
