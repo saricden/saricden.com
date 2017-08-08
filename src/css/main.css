@@ -164,24 +164,29 @@ article.snippet {
   content: "";
   clear: both;
 }
-.website {
+.website, .game {
   float: left;
-  width: 25%;
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
 }
-.website a {
+.website {
+  width: 25%;
+}
+.game {
+  width: 20%;
+}
+.website a, .game a {
   display: block;
   padding: 10px;
   background-color: #FFF;
 }
-.website a img {
+.website a img, .game a img {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
-.website a span {
+.website a span, .game a span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -224,6 +229,12 @@ article.snippet {
 
 /* Media queries
 ----------------------------- */
+@media only screen and (max-width: 675px) {
+  .game {
+    width: 25%;
+  }
+}
+
 @media only screen and (max-width: 615px) {
   .website {
     width: 33%;
@@ -234,10 +245,13 @@ article.snippet {
   .titlebox {
     text-align: center;
   }
+  .game {
+    width: 33%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-  .website {
+  .website, .game {
     width: 50%;
   }
 }

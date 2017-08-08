@@ -20,4 +20,18 @@ permalink: /projects/
       </div>
     {% endfor %}
   </div>
+
+  <hr>
+  
+  <div class="clearfix">
+    <h2>Games</h2>
+    {% for post in site.categories.games %}
+      <div class="game">
+        <a href="{{ post.url }}">
+          <img src="{{ post.icon }}" alt>
+          <span>{{ post.title }}</span>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </main>
