@@ -9,13 +9,15 @@ permalink: /projects/
 </header>
 
 <main class="contentbox">
-  <div class="website-container">
+  <div class="clearfix">
     <h2>Websites</h2>
     {% for post in site.categories.websites %}
-      <a href="{{ post.url }}" class="website">
-        <img src="{{ post.listImg }}" alt>
-        <span>{{ post.title }}</span>
-      </a>
+      <div class="website">
+        <a href="{{ post.url }}">
+          <img src="{{ post.listImg }}" alt>
+          <span>{{ post.title }}</span>
+        </a>
+      </div>
     {% endfor %}
   </div>
 </main>

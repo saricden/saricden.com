@@ -158,29 +158,30 @@ article.snippet {
   margin-bottom: 10px;
 }
 
-/* Website project snippet */
-.website-container:after {
+/* Clear floats */
+.clearfix:after {
   display: block;
   content: "";
   clear: both;
 }
-a.website {
-  display: block;
+.website {
   float: left;
-  width: 21%;
+  width: 25%;
   box-sizing: border-box;
-  margin-right: 1%;
-  margin-bottom: 1%;
   padding: 10px;
-  background-color: #FFF;
   text-align: center;
 }
-a.website img {
+.website a {
+  display: block;
+  padding: 10px;
+  background-color: #FFF;
+}
+.website a img {
   display: block;
   width: 100%;
   margin-bottom: 10px;
 }
-a.website span {
+.website a span {
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -223,9 +224,9 @@ a.website span {
 
 /* Media queries
 ----------------------------- */
-@media only screen and (max-width: 800px) {
-  a.website {
-    width: 30%;
+@media only screen and (max-width: 615px) {
+  .website {
+    width: 33%;
   }
 }
 
@@ -233,7 +234,10 @@ a.website span {
   .titlebox {
     text-align: center;
   }
-  a.website {
-    width: 49%;
+}
+
+@media only screen and (max-width: 450px) {
+  .website {
+    width: 50%;
   }
 }
