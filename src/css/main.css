@@ -164,7 +164,7 @@ article.snippet {
 }
 
 /* Clear floats */
-.clearfix:after {
+.clearfix:after, .photo-gallery:after {
   display: block;
   content: "";
   clear: both;
@@ -196,6 +196,25 @@ article.snippet {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Photo gallery */
+ul.photo-gallery {
+  list-style: none;
+  padding: 0;
+}
+ul.photo-gallery li {
+  float: left;
+  width: 25%;
+}
+ul.photo-gallery li a,
+ul.photo-gallery li a img {
+  display: block;
+  width: 100%;
+}
+ul.photo-gallery li a {
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 /* Single-use classes
@@ -240,6 +259,12 @@ article.snippet {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  ul.photo-gallery li {
+    width: 33%;
+  }
+}
+
 @media only screen and (max-width: 615px) {
   .website {
     width: 33%;
@@ -252,6 +277,12 @@ article.snippet {
   }
   .game {
     width: 33%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  ul.photo-gallery li {
+    width: 50%;
   }
 }
 
