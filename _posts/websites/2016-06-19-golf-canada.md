@@ -17,37 +17,37 @@ listImg: /src/img/website-screens-square/golf-canada.jpg
 <h2>Screenshots</h2>
 <ul class="photo-gallery">
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada.jpg">
       <img src="/src/img/website-screens-square/golf-canada.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-home.jpg">
       <img src="/src/img/website-screens-square/golf-canada-home.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-score.jpg">
       <img src="/src/img/website-screens-square/golf-canada-score.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-badges.jpg">
       <img src="/src/img/website-screens-square/golf-canada-badges.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-mobile.jpg">
       <img src="/src/img/website-screens-square/golf-canada-mobile.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-mobile2.jpg">
       <img src="/src/img/website-screens-square/golf-canada-mobile2.jpg">
     </a>
   </li>
   <li>
-    <a href="">
+    <a href="" data-box-img="/src/img/website-screens/golf-canada-mobile3.jpg">
       <img src="/src/img/website-screens-square/golf-canada-mobile3.jpg">
     </a>
   </li>
