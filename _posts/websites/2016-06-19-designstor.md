@@ -1,5 +1,5 @@
 ---
-layout: website
+layout: content
 title:  "Designstor"
 date:   2016-06-19 11:32:22
 categories: posts websites

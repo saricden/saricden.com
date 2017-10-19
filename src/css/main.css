@@ -197,6 +197,13 @@ article.snippet {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.vcenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+}
 
 /* Photo gallery */
 ul.photo-gallery {
@@ -293,6 +300,18 @@ ul.photo-gallery li a {
   -webkit-transform: perspective(1px) translateY(-50%);
   -ms-transform: perspective(1px) translateY(-50%);
   transform: perspective(1px) translateY(-50%);
+}
+#swf-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #CCC;
+}
+#swf-game {
+  box-shadow: 0 0 15px #000;
 }
 
 /* Media queries
