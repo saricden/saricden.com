@@ -50,6 +50,12 @@ var openBoxImg = function(e) {
       galleryImg.style.width = "auto";
       galleryImg.style.height = "100%";
     }
+
+    // Check if img dimensions exceed natural dimensions and re-adjust
+    if (galleryImg.offsetWidth > imgObj.width && galleryImg.offsetHeight > imgObj.height) {
+      galleryImg.style.width = imgObj.width+"px";
+      galleryImg.style.height = imgObj.height+"px";
+    }
   });
 };
 
