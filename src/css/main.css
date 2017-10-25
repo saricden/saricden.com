@@ -130,16 +130,6 @@ article time {
 
 /* Reusable classes
 ----------------------------- */
-/* Homepage title box */
-.titlebox {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  max-width: 553px;
-  box-sizing: border-box;
-  padding: 13px;
-}
-
 /* Page header banner */
 .banner {
   padding: 30px;
@@ -233,13 +223,16 @@ ul.photo-gallery li a {
   margin: 0;
   padding: 0;
   color: #FFF;
-  background: 
-    linear-gradient(
-        rgba(0, 0, 0, 0.9), 
-        rgba(0, 0, 0, 0.9)
-    ),
-    #CCC url(/src/img/home-bg.jpg) no-repeat bottom center;
-  background-size: cover;
+  background-color: #43A047;
+}
+
+#home > div {
+  width: 100%;
+  max-width: 567px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
 }
 
 #overlay {
@@ -339,9 +332,6 @@ ul.photo-gallery li a {
 }
 
 @media only screen and (max-width: 552px) {
-  .titlebox {
-    text-align: center;
-  }
   .game {
     width: 33%;
   }
