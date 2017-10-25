@@ -13,6 +13,7 @@ var closeAll = function() {
   nav.classList.remove("open");
   overlay.classList.remove("open");
   if (gallery != null) gallery.classList.remove("open");
+  if (loader != null) loader.classList.remove("open");
 };
 
 // Functions for box img links (gallery)
@@ -32,6 +33,7 @@ var openBoxImg = function(e) {
 
   // Display the loader
   loader.classList.add("open");
+  overlay.classList.add("open");
 
   // Hide loader, display image
   imgObj.addEventListener("load", function() {
@@ -39,7 +41,6 @@ var openBoxImg = function(e) {
     loader.classList.remove("open");
     galleryImg.src = imgObj.src;
     gallery.classList.add("open");
-    overlay.classList.add("open");
 
     galleryImg.style.width = "100%";
     galleryImg.style.height = "auto";
