@@ -51,6 +51,7 @@ nav .navbtn, nav .closebtn {
   width: 40px;
   height: 40px;
   margin: 0;
+  padding: 1px 6px;
   border: 0;
   background-color: #FFF;
   outline: 0;
