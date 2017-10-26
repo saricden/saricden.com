@@ -225,14 +225,32 @@ ul.photo-gallery li a {
   color: #FFF;
   background-color: #43A047;
 }
-
-#home > div {
+#home .titlebox, #home .latest-update {
   width: 100%;
   max-width: 567px;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 20px;
+  color: #FFF;
   text-align: center;
+}
+#home .latest-update {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+}
+#home .latest-update a {
+  color: #FFF;
+}
+#home .latest-update a span {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px;
+  border-radius: 4px;
+  color: #43A047;
+  background-color: #FFF;
 }
 
 #overlay {

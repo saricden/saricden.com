@@ -3,6 +3,7 @@ var overlay = document.getElementById("overlay");
 var loader = document.getElementById("loader");
 var gallery = document.getElementById("gallery");
 var galleryImg = document.getElementById("galleryImg");
+var latestCommit = document.getElementById("latestCommit");
 
 // Functions for opening and closing nav menu
 var openNav = function() {
@@ -16,7 +17,7 @@ var closeAll = function() {
   if (loader != null) loader.classList.remove("open");
 };
 
-// Functions for box img links (gallery)
+// Function for box img links (gallery)
 var openBoxImg = function(e) {
   // Sanity check for DOM objects
   if (loader == null || gallery == null || galleryImg == null) {
@@ -59,7 +60,51 @@ var openBoxImg = function(e) {
   });
 };
 
-// Binding
+// Functions for loading latest commit on homepage
+var getJSON = function(url, callback) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
+      var data = JSON.parse(xhttp.responseText);
+      if (callback) callback(data);
+    }
+  };
+  xhttp.open('GET', url);
+  xhttp.send(); 
+};
+var formatDate = function(date) {
+  var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+  ];
+
+  var day = date.getDate();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+
+  return monthNames[monthIndex]+' '+day+', '+year;
+}
+var showCommit = function(data) {
+  var date = new Date(data.author.date);
+  date = formatDate(date);
+  var message = data.message;
+  var pageURL = data.html_url;
+  latestCommit.innerHTML = "<span>"+date+"</span> "+message;
+  latestCommit.href = pageURL;
+};
+var getCommitURL = function(data) {
+  var url = data.object.url;
+  if (url) {
+    getJSON(url, showCommit);
+  }
+};
+var showLatestCommit = function() {
+  getJSON("https://api.github.com/repos/saricden/saricden.com/git/refs/heads/gh-pages", getCommitURL);
+};
+
+// Binding / calling
 document.getElementById("openNavBtn").addEventListener("click", openNav);
 document.getElementById("closeNavBtn").addEventListener("click", closeAll);
 document.getElementById("overlay").addEventListener("click", closeAll);
@@ -69,4 +114,7 @@ for (var i = 0; i < boxImgLinks.length; i++) {
 }
 if (galleryImg != null) {
   gallery.addEventListener("click", closeAll);
+}
+if (latestCommit != null) {
+  showLatestCommit();
 }
