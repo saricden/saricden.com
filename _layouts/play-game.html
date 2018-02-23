@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{ "/src/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,600" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/821db1b724.js"></script>
   </head>
 
   <body>
@@ -19,7 +23,8 @@
     </noscript>
 
     <div id="swf-container">
-      <object id="swf-game" class="vcenter" width="{{ page.width }}" height="{{ page.height }}" data="{{ page.swf }}"></object>
+      <object id="swf-game" width="{{ page.width }}" height="{{ page.height }}" data="{{ page.swf }}"></object>
+      <a href=".."><i class="fa fa-arrow-left"></i> Go back</a>
     </div>
 
   </body>

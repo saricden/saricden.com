@@ -1,20 +1,15 @@
 ---
 layout: default
 ---
-<header class="banner">
-  <h1>Projects</h1>
-  <p>The stuff I've worked on.</p>
+<header class="centerblock textcenter">
+  <img src="/src/img/me.svg" class="profile-pic" />
+  <h1>saricden (Kirk M.) <span>// {{page.subtitle}}</span></h1>
+  <a href="/"><i class="fa fa-arrow-left"></i> Go Home</a>
 </header>
 
-<main class="contentbox">
-  <article class="content">
-    {{ content }}
-  </article>
+<main class="centerblock">
+  {{ content }}
+  <div class="centerbtn-lg">
+    <a href="/">More Projects</a>
+  </div>
 </main>
-
-<div id="loader" class="vcenter">
-  <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="64px" height="64px" viewBox="0 0 128 128" xml:space="preserve"><g><path d="M64 9.75A54.25 54.25 0 0 0 9.75 64H0a64 64 0 0 1 128 0h-9.75A54.25 54.25 0 0 0 64 9.75z" fill="#FFFFFF" fill-opacity="1"/><animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="800ms" repeatCount="indefinite"></animateTransform></g></svg>
-</div>
-<div id="gallery">
-  <img id="galleryImg" alt>
-</div>

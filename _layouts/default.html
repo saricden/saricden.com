@@ -11,34 +11,16 @@
     <link rel="stylesheet" href="{{ "/src/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,600" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/821db1b724.js"></script>
   </head>
 
   <body>
     <noscript>
       This website requires JavaScript to work. Please enable JavaScript or update your browser/computer.
     </noscript>
-
-    <nav>
-      <h1><a href="/">{saricDen} <small>Kirk's Website</small></a></h1>
-      <button id="openNavBtn" class="navbtn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul id="navMenu">
-        <li>
-          <button id="closeNavBtn" class="closebtn">
-            <span></span>
-            <span></span>
-          </button>
-        </li>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-      <div id="overlay"></div>
-    </nav>
 
     {{ content }}
 

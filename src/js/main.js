@@ -104,17 +104,57 @@ var showLatestCommit = function() {
   getJSON("https://api.github.com/repos/saricden/saricden.com/git/refs/heads/gh-pages", getCommitURL);
 };
 
+// Contact Modal
+var contactModal = document.getElementById('contact-modal');
+var contactBtn = document.getElementById('contact-btn');
+var cancelBtn = document.getElementById('cancel-btn');
+var contactForm = document.getElementById('ef');
+var submitting = false;
+
+var openContactModal = function(e) {
+  if (!submitting) {
+    e.preventDefault();
+    contactModal.classList.add("open");
+  }
+};
+var closeContactModal = function(e) {
+  if (!submitting) {
+    if (e.target === e.currentTarget) {
+      e.preventDefault();
+      contactModal.classList.remove("open");
+    }
+  }
+};
+var showSendingMsg = function(e) {
+  submitting = true;
+  var fields = contactForm.querySelectorAll("input, textarea, button");
+  for (var i = 0; i < fields.length; i++) {
+    fields[i].readonly = true;
+  }
+  document.getElementById('submit-btn').innerHTML = "<i class=\"fa fa-circle-o-notch fa-spin fa-fw\"></i> Redirecting...";
+  contactForm.classList.add('disabled');
+};
+
+if (contactModal)
+  contactModal.addEventListener("click", closeContactModal);
+if (contactBtn)
+  contactBtn.addEventListener("click", openContactModal);
+if (cancelBtn)
+  cancelBtn.addEventListener("click", closeContactModal);
+if (contactForm)
+  contactForm.addEventListener("submit", showSendingMsg);
+
 // Binding / calling
-document.getElementById("openNavBtn").addEventListener("click", openNav);
-document.getElementById("closeNavBtn").addEventListener("click", closeAll);
-document.getElementById("overlay").addEventListener("click", closeAll);
-var boxImgLinks = document.querySelectorAll("[data-box-img]");
-for (var i = 0; i < boxImgLinks.length; i++) {
-  boxImgLinks[i].addEventListener("click", openBoxImg);
-}
-if (galleryImg != null) {
-  gallery.addEventListener("click", closeAll);
-}
-if (latestCommit != null) {
-  showLatestCommit();
-}
+// document.getElementById("openNavBtn").addEventListener("click", openNav);
+// document.getElementById("closeNavBtn").addEventListener("click", closeAll);
+// document.getElementById("overlay").addEventListener("click", closeAll);
+// var boxImgLinks = document.querySelectorAll("[data-box-img]");
+// for (var i = 0; i < boxImgLinks.length; i++) {
+//   boxImgLinks[i].addEventListener("click", openBoxImg);
+// }
+// if (galleryImg != null) {
+//   gallery.addEventListener("click", closeAll);
+// }
+// if (latestCommit != null) {
+//   showLatestCommit();
+// }

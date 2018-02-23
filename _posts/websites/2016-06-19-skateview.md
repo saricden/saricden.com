@@ -1,54 +1,29 @@
 ---
 layout: content
-title:  "Skateview"
+subtitle:  "Skateview"
 date:   2016-06-19 11:32:22
 categories: posts websites
 order: 2
-permalink: /websites/skateview/
+permalink: /skateview/
 listImg: /src/img/website-screens-square/skateview.jpg
 ---
-<h1>{{ page.title }}</h1>
+<img src="/src/img/website-screens/skateview.jpg" class="blockimg" alt="Skateview" />
 <p>
-  Skateview is a website designed to allow users to explore skate parks by utilizing 360 panoramas to create interactive tours. The site uses a variety of coding languages including JavaScript, HTML5, CSS3, and Ruby (<a href="https://jekyllrb.com/" target="_blank">JekyllRB</a>). This project was a solo side-project of my own. The website is no longer online, however you can view screenshots below.<br>
-  <br>
-  <a href=""><s>Visit Website</s></a> (No longer online)
+  <span class="mini-title">Design & Development:</span>
+  Kirk Morris (solo project)
+  <br /><br />
+  <span class="mini-title">Project Details:</span>
+  Responsive website providing spherical panoramic tours of skate parks.
+  <br /><br />
+  <span class="mini-title">Skills Used:</span>
+  Back-end development utilizing JekyllRB flat file CMS. Front-end development via HTML5, CSS3, and JavaScript. Spherical panorama photography.
 </p>
-
-<h2>Screenshots</h2>
-<ul class="photo-gallery">
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview.jpg">
-      <img src="/src/img/website-screens-square/skateview.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-park.jpg">
-      <img src="/src/img/website-screens-square/skateview-park.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-toronto.jpg">
-      <img src="/src/img/website-screens-square/skateview-toronto.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-panorama.jpg">
-      <img src="/src/img/website-screens-square/skateview-panorama.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-panorama2.jpg">
-      <img src="/src/img/website-screens-square/skateview-panorama2.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-mobile.jpg">
-      <img src="/src/img/website-screens-square/skateview-mobile.jpg">
-    </a>
-  </li>
-  <li>
-    <a href="" data-box-img="/src/img/website-screens/skateview-mobile2.jpg">
-      <img src="/src/img/website-screens-square/skateview-mobile2.jpg">
-    </a>
-  </li>
-</ul>
+<div class="centerbtn-lg">
+  <p>(Website is no longer online)</p>
+</div>
+<div class="multi-blockimg">
+  <div><img src="/src/img/website-screens/skateview-mobile.jpg" alt="Skate View Mobile 1" /></div>
+  <div><img src="/src/img/website-screens/skateview-mobile2.jpg" alt="Skate View Mobile 2" /></div>
+</div>
+<img src="/src/img/website-screens/skateview-panorama.jpg" class="blockimg topmar" alt="Skateview Panorama" />
+<img src="/src/img/website-screens/skateview-park.jpg" class="blockimg" alt="Skateview Park" />
