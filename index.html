@@ -232,23 +232,21 @@ title: saricDen - Software Developer in Victoria, BC
     <form id="ef" action="https://formspree.io/worker.kirk@gmail.com" method="POST">
       <div>
         <label for="ef_email">Your Email</label>
-        <input id="ef_email" name="_replyto" type="email" placeholder="you@yourdomain.com" value="test@test.ca">
+        <input id="ef_email" name="_replyto" type="email" placeholder="you@yourdomain.com" />
       </div>
       <div>
         <label for="ef_name">Your Name</label>
-        <input id="ef_name" name="emailer_name" type="text" placeholder="Rick James" value="Rick James">
+        <input id="ef_name" name="emailer_name" type="text" placeholder="Rick James" />
       </div>
       <div>
         <label for="ef_subject">Subject</label>
-        <input id="ef_subject" name="_subject" type="text" placeholder="What's New?" value="What Up">
+        <input id="ef_subject" name="_subject" type="text" placeholder="What's New?" />
       </div>
       <div>
         <label for="ef_message">Message</label>
-        <textarea id="ef_message" name="message" placeholder="Hey Kirk..." rows="5">Hey Kirk,
-
-What's good player?</textarea>
+        <textarea id="ef_message" name="message" placeholder="Hey Kirk..." rows="5"></textarea>
       </div>
-      <input type="hidden" name="_next" value="//localhost:4000/message-received" />
+      <input type="hidden" name="_next" value="//saricden.com/message-received" />
       <input type="text" name="_gotcha" style="display:none;" />
       <div style="text-align:center;">
         <button type="submit" id="submit-btn">Send Message</button>
