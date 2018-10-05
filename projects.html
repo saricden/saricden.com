@@ -1,37 +1,88 @@
 ---
 layout: default
-title: Projects - saricDen
+title: "Digital projects - Kirk M. @saricden"
 permalink: /projects/
+isProjects: true
 ---
-<header class="banner">
-  <h1>Projects</h1>
-  <p>The stuff I've worked on.</p>
-</header>
+{% assign projects = site.categories.projects | sort: "order" %}
 
-<main class="contentbox">
-  <div class="clearfix">
-    <h2>Websites</h2>
-    {% for post in site.categories.websites %}
-      <div class="website">
-        <a href="{{ post.url }}">
-          <img src="{{ post.listImg }}" alt>
-          <span>{{ post.title }}</span>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+<div class="contentbox">
+  <header class="page">
+    <h1>
+      Kirk M. <span class="handle">@saricden</span>'s digital
+      <span class="primary stretch">
+        <span class="text-fade"><i class="fa fa-flask"></i></span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
+      </span>
+      <span class="secondary">
+        Websites, Apps & Games
+      </span>
+    </h1>
+  </header>
 
-  <hr>
-  
-  <div class="clearfix">
-    <h2>Games</h2>
-    {% for post in site.categories.games %}
-      <div class="game">
-        <a href="{{ post.url }}">
-          <img src="{{ post.icon }}" alt>
-          <span>{{ post.title }}</span>
-        </a>
-      </div>
+  <main>
+    {% for project in projects %}
+      {% if project.featured %}
+        <article class="snippet project featured">
+          <div class="img">
+            <img src="{{ project.listImg }}" alt="" title="{{ project.title }}" />
+          </div>
+          <div class="info">
+            <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+            {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            <p>{{ project.content | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ project.url }}" class="btn">Read More</a>
+            {% if project.siteURL %}
+              <a href="{{ project.siteURL }}" class="btn link">
+                <i class="fa fa-external-link-alt"></i>
+                Visit Site
+              </a>
+            {% elsif project.gameURL %}
+              <a href="{{ project.gameURL }}" class="btn link">
+                <i class="fa fa-external-link-alt"></i>
+                Play Game
+              </a>
+            {% endif %}
+          </div>
+        </article>
+        <hr class="skinny">
+      {% endif %}
     {% endfor %}
-  </div>
-</main>
+    <div class="project-cols">
+      {% for project in projects %}
+        {% if project.featured %}
+        {% else %}
+          <article class="snippet project">
+            <div class="img">
+              <img src="{{ project.listImg }}" alt="" title="{{ project.title }}" />
+            </div>
+            <div class="info">
+                <h1><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                <div class="tags">
+                  {% for tag in project.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                <p>{{ project.content | strip_html | truncatewords: 30 }}</p>
+                <div class="action-btns">
+                  <a href="{{ project.url }}" class="btn">Read More</a>
+                  {% if project.siteURL %}
+                    <a href="{{ project.siteURL }}" class="btn link">
+                      <i class="fa fa-external-link-alt"></i>
+                      Visit Site
+                    </a>
+                  {% elsif project.gameURL %}
+                    <a href="{{ project.gameURL }}" class="btn link">
+                      <i class="fa fa-external-link-alt"></i>
+                      Play Game
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main>
+</div>

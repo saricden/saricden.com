@@ -2,9 +2,11 @@
 layout: content
 title:  "Balloon Hero"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 11
 permalink: /projects/games/balloon-hero/
-icon: /src/img/game-covers/balloon-hero.png
+listImg: /src/img/project-covers/balloon-hero.jpg
 ---
 <h1>{{ page.title }}</h1>
 <p>

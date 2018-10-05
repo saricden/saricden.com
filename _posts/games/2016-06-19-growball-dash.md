@@ -2,9 +2,11 @@
 layout: content
 title:  "Growball Dash"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 17
 permalink: /projects/games/growball-dash/
-icon: /src/img/game-covers/growball-dash.png
+listImg: /src/img/project-covers/growball-dash.jpg
 ---
 <h1>{{ page.title }}</h1>
 <p>

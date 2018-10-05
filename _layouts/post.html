@@ -1,16 +1,36 @@
 ---
 layout: default
 ---
-<header class="banner">
-  <h1>Kirk's Blog</h1>
-  <p>Programming, life, and everything in-between.</p>
-</header>
+{% assign titleWords = page.title | split: " " %}
+{% assign firstWordLetters = titleWords[0] | split: "" %}
+{% assign titleRemainder = page.title | replace: titleWords[0], "" %}
 
-<main class="contentbox">
-  <article class="content">
-    <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.date }}">Posted on {{ page.date | date: '%B %d, %Y' }}</time>
-    <hr>
-    {{ content }}
-  </article>
-</main>
+<div class="contentbox">
+  <header class="page">
+    <h1>
+      <a href="/blog/">
+        Kirk M. <span class="handle">@saricden</span>'s blog presents:
+        <span class="primary stretch">
+          {% for letter in firstWordLetters %}
+            <span>{{ letter }}</span>
+          {% endfor %}
+        </span>
+        <span class="secondary">{{ titleRemainder }}</span>
+      </a>
+    </h1>
+  </header>
+
+  <main class="primary">
+    <article class="content">
+      <header class="post">
+        <i class="{{ page.icon }}"></i>
+        <time datetime="{{ page.date }}">Posted on {{ page.date | date: '%B %d, %Y' }}</time>
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </header>
+      <hr class="skinny" />
+      {{ content }}
+    </article>
+  </main>
+</div>

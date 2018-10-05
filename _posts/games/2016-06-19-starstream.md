@@ -2,9 +2,11 @@
 layout: content
 subtitle:  "Starstream"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 9
 permalink: /starstream/
-icon: /src/img/game-covers/starstream.jpg
+listImg: /src/img/project-covers/starstream.jpg
 ---
 <img src="/src/img/game-screens/starstream-rocket.jpg" class="blockimg" alt="Starstream" />
 <p>

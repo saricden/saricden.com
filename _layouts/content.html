@@ -1,15 +1,36 @@
 ---
 layout: default
 ---
-<header class="centerblock textcenter">
-  <img src="/src/img/me.svg" class="profile-pic" />
-  <h1>saricden (Kirk M.) <span>// {{page.subtitle}}</span></h1>
-  <a href="/"><i class="fa fa-arrow-left"></i> Go Home</a>
-</header>
+<div class="contentbox">
+  <header class="page">
+    <h1>
+      <a href="/projects/">
+        Kirk M. <span class="handle">@saricden</span> presents:
+        <span class="primary stretch">
+          <span class="text-fade"><i class="fa fa-flask"></i></span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span>
+          <span class="text-fade handle">
+            G13
+          </span>
+        </span>
+        <span class="secondary">
+          {{ page.title }}
+        </span>
+      </a>
+    </h1>
+  </header>
 
-<main class="centerblock">
-  {{ content }}
-  <div class="centerbtn-lg">
-    <a href="/">More Projects</a>
-  </div>
-</main>
+  <hr class="skinny" />
+
+  <main>
+    <article class="primary">
+      <div class="text-center">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+
+      {{ content }}
+    </article>
+  </main>
+
+</div>

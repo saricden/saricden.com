@@ -2,9 +2,11 @@
 layout: content
 title:  "Space Pong"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 18
 permalink: /projects/games/space-pong/
-icon: /src/img/game-covers/space-pong.png
+listImg: /src/img/project-covers/space-pong.jpg
 ---
 <h1>{{ page.title }}</h1>
 <p>

@@ -2,9 +2,11 @@
 layout: content
 title:  "Wiz n' Dodge"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 19
 permalink: /projects/games/wiz-n-dodge/
-icon: /src/img/game-covers/wiz-n-dodge.png
+listImg: /src/img/project-covers/wiz-n-dodge.jpg
 ---
 <h1>{{ page.title }}</h1>
 <p>

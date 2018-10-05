@@ -2,10 +2,12 @@
 layout: content
 subtitle:  "Golf Canada"
 date:   2016-06-19 11:32:22
-categories: posts websites
-order: 1
+categories: posts projects websites
+tags: website laravel
+order: 3
 permalink: /golf-canada/
-listImg: /src/img/website-screens-square/golf-canada.jpg
+listImg: /src/img/project-covers/golf-canada.jpg
+siteURL: "http://golfcanada.ca/"
 ---
 <img src="/src/img/website-screens/golf-canada.jpg" class="blockimg" alt="Golf Canada" />
 <p>

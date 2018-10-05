@@ -1,19 +1,34 @@
 ---
 layout: default
-title: Blog - saricDen
+title: "Blog about software development & design - Kirk M. @saricden"
 permalink: /blog/
+isBlog: true
 ---
-<header class="banner">
-  <h1>Kirk's Blog</h1>
-  <p>Programming, life, and everything in-between.</p>
-</header>
+<div class="contentbox">
+  <header class="page">
+    <h1>
+      Kirk M. <span class="handle">@saricden</span>'s blog about
+      <span class="primary stretch"><span class="text-fade">&lt;</span><span>S</span><span>o</span><span>f</span><span>t</span><span>w</span><span>a</span><span>r</span><span>e</span><span class="text-fade">/&gt;</span></span>
+      <span class="secondary">Development & Design</span>
+    </h1>
+  </header>
 
-<main class="contentbox">
-  {% for post in site.categories.blog %}
-    <article class="snippet">
-      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-      <p>{{ post.content | strip_html | truncatewords:30 }}</p>
-      <time datetime="{{ post.date }}">Posted on {{ post.date | date: '%B %d, %Y' }}</time>
-    </article>
-  {% endfor %}
-</main>
+  <main class="primary nopad">
+    {% for post in site.categories.blog %}
+      <a href="{{ post.url }}" class="article-link">
+        <article class="snippet">
+          <i class="post-icon {{ post.icon }}"></i>
+          <div>
+            <h1>{{ post.title }}</h1>
+            <time datetime="{{ post.date }}">Posted on {{ post.date | date: '%B %d, %Y' }}</time>
+            {% for tag in post.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+            <p>{{ post.content | strip_html | truncatewords:30 }}</p>
+          </div>
+        </article>
+      </a>
+      <hr class="skinny" />
+    {% endfor %}
+  </main>
+</div>

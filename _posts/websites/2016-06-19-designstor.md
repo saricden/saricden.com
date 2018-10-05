@@ -3,10 +3,11 @@ layout: content
 subtitle: "Designstor"
 title:  "Designstor"
 date:   2016-06-19 11:32:22
-categories: posts websites
-order: 3
+categories: posts projects websites
+tags: website wordpress
+order: 6
 permalink: /designstor/
-listImg: /src/img/website-screens-square/designstor.jpg
+listImg: /src/img/project-covers/designstor.jpg
 ---
 <img src="/src/img/website-screens/designstor.jpg" class="blockimg" alt="Designstor" />
 <p>

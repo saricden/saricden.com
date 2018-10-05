@@ -8,13 +8,15 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poor+Story" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/src/css/main.css" | prepend: site.baseurl }}">
+    {% if page.isHome %}
+      <link rel="stylesheet" href="{{ "/src/css/home.css" | prepend: site.baseurl }}">
+    {% endif %}
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans:400,600" rel="stylesheet">
-
-    <script src="https://use.fontawesome.com/821db1b724.js"></script>
   </head>
 
   <body>
@@ -22,9 +24,55 @@
       This website requires JavaScript to work. Please enable JavaScript or update your browser/computer.
     </noscript>
 
-    {{ content }}
+    <button class="nav-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="primary">
+      <img src="/src/img/me.svg" alt="Kirk" />
+      <header>Kirk M. <span class="handle">@saricden</span></header>
+      <a href="/"{% if page.isHome %} class="active"{% endif %}>
+        <i class="fa fa-home"></i>
+        Home
+      </a>
+      <a href="/blog"{% if page.isBlog %} class="active"{% endif %}>
+        <i class="fa fa-pen"></i>
+        Blog
+      </a>
+      <a href="/projects"{% if page.isProjects %} class="active"{% endif %}>
+        <i class="fa fa-flask"></i>  
+        Projects
+      </a>
+      <a href="/sneakyconnect" id="connectLink">
+        <i class="fa fa-share-alt"></i> 
+        Connect
+      </a>
+    </nav>
+
+    <nav class="social">
+      <header>Connect with Kirk M. <span class="handle">@saricden</span></header>
+      <a href="//github.com/saricden/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="//stackoverflow.com/users/1705378/saricden?tab=profile" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+      <a href="//instagram.com/saricden" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="//www.patreon.com/saricden" target="_blank"><i class="fab fa-patreon"></i></a>
+      <a href="//linkedin.com/in/saricden/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="" id="mailLink"><i class="fa fa-envelope"></i></a>
+    </nav>
+    
+    <div class="container">
+
+      {{ content }}
+
+    </div>
+
 
     <script type="text/javascript" src="/src/js/main.js"></script>
+    {% if page.isHome %}
+      <script src="/src/js/phaser.min.js"></script>
+      <script src="/src/js/home.js"></script>
+    {% endif %}
   </body>
 
 </html>

@@ -2,28 +2,14 @@
 layout: content
 subtitle:  "Skateview"
 date:   2016-06-19 11:32:22
-categories: posts websites
+categories: posts projects websites
+tags: website jekyllrb
 order: 2
 permalink: /skateview/
-listImg: /src/img/website-screens-square/skateview.jpg
+listImg: /src/img/project-covers/skateview.jpg
 ---
-<img src="/src/img/website-screens/skateview.jpg" class="blockimg" alt="Skateview" />
-<p>
-  <span class="mini-title">Design & Development:</span>
-  Kirk Morris (solo project)
-  <br /><br />
-  <span class="mini-title">Project Details:</span>
-  Responsive website providing spherical panoramic tours of skate parks.
-  <br /><br />
-  <span class="mini-title">Skills Used:</span>
-  Back-end development utilizing JekyllRB flat file CMS. Front-end development via HTML5, CSS3, and JavaScript. Spherical panorama photography.
-</p>
-<div class="centerbtn-lg">
-  <p>(Website is no longer online)</p>
-</div>
-<div class="multi-blockimg">
-  <div><img src="/src/img/website-screens/skateview-mobile.jpg" alt="Skate View Mobile 1" /></div>
-  <div><img src="/src/img/website-screens/skateview-mobile2.jpg" alt="Skate View Mobile 2" /></div>
-</div>
-<img src="/src/img/website-screens/skateview-panorama.jpg" class="blockimg topmar" alt="Skateview Panorama" />
-<img src="/src/img/website-screens/skateview-park.jpg" class="blockimg" alt="Skateview Park" />
+Skateview was a website designed to enable skaters to find and explore new skate parks digitally. The site contained virtual tours of skate parks in Ontario.
+
+The plan was to travel the world and map out as many skate parks as possible, however I didn't really take into account how big of a challenge this would be in itself.
+
+The site is no longer online, however you can still view the code and check out the screenshots here!

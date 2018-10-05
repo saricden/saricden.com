@@ -2,9 +2,11 @@
 layout: content
 subtitle:  "Autocannon"
 date:   2016-06-19 11:32:22
-categories: posts games
+categories: posts projects games
+tags: game flash as2
+order: 10
 permalink: /autocannon/
-icon: /src/img/game-covers/autocannon.png
+listImg: /src/img/project-covers/autocannon.jpg
 ---
 <img src="/src/img/game-screens/autocannon-play.jpg" class="blockimg" alt="Autocannon" />
 <p>
