@@ -50,6 +50,7 @@ for (var i in shareHREFs) {
       shareHREFs[i].style.opacity = 0.25;
       shareHREFs[i].setAttribute("title", "Sharing not supported by your device / browser. :'(");
       shareHREFs[i].style.cursor = "not-allowed";
+      shareHREFs[i].style.textDecoration = "line-through";
     }
   }
 }

@@ -24,8 +24,10 @@ isBlog: true
             <span class="tag">{{ tag }}</span>
           {% endfor %}
           <p>{{ post.content | strip_html | truncatewords:30 }}</p>
-          <a href="{{ post.url }}" class="btn">Read More</a>
-          <a data-share-href="{{ post.url }}" data-share-title="{{ post.title }}" data-share-text="{{ post.content | strip_html | truncatewords: 30 }}"  class="btn link"><i class="fa fa-share-square"></i> Share Article</a>
+          <div class="action-btns">
+            <a href="{{ post.url }}" class="btn">Read More</a>
+            <a data-share-href="{{ post.url }}" data-share-title="{{ post.title }}" data-share-text="{{ post.content | strip_html | truncatewords: 30 }}"  class="btn link"><i class="fa fa-share-square"></i> Share Article</a>
+          </div>
         </div>
       </article>
       <hr class="skinny" />
