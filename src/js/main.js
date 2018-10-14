@@ -25,3 +25,31 @@ social_nav.addEventListener("click", function(e) {
   if (e.target == this)
   social_nav.classList.toggle("open");
 });
+
+var shareHREFs = document.querySelectorAll("[data-share-href]");
+
+for (var i in shareHREFs) {
+  if (typeof shareHREFs[i] == "object") {
+    if (navigator.share) {
+      shareHREFs[i].addEventListener("click", function(e) {
+        e.preventDefault();
+        var title = this.getAttribute("data-share-title");
+        var text = this.getAttribute("data-share-text");
+        var url = this.getAttribute("data-share-href");
+
+        navigator.share({
+            title: title,
+            text: text,
+            url: url,
+        })
+        .then(function() { console.log('Successful share') })
+        .catch(function(error) { console.log('Error sharing', error) });
+      });
+    }
+    else {
+      shareHREFs[i].style.opacity = 0.25;
+      shareHREFs[i].setAttribute("title", "Sharing not supported by your device / browser. :'(");
+      shareHREFs[i].style.cursor = "not-allowed";
+    }
+  }
+}

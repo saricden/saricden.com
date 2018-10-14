@@ -290,22 +290,13 @@ button.nav-btn.open span:nth-child(3) {
   bottom: 50%;
   transform: translateY(50%) rotate(135deg);
 }
-a.article-link {
-  display: block;
-  padding: 20px;
-  background-color: transparent;
-  box-shadow: none;
-
-  transition: background-color 1.2s;
-}
-a.article-link:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
 article.snippet {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 20px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -330,18 +321,12 @@ article.snippet i.post-icon {
 
   transition: background-color 1.2s, border-color 1.2s, color 1.2s;
 }
-a.article-link:hover article.snippet i {
-  background-color: transparent;
-  color: #000;
-  border-color: #000;
-}
 article.snippet time {
   display: block;
   margin-bottom: 5px;
 }
 article.snippet p {
-  margin-bottom: 0;
-  margin-top: 5px;
+  margin: 5px 0;
 }
 article.snippet div {
   flex: 1;
@@ -404,8 +389,12 @@ a.btn {
   background-color: #000;
 }
 a.btn.link {
+  padding: 5px 0;
   color: #000;
   background-color: transparent;
+}
+a.btn:nth-of-type(1) {
+  margin-left: 0;
 }
 header.post {
   text-align: center;
