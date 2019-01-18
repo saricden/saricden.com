@@ -8,11 +8,11 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poor+Story" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/src/css/main.css" | prepend: site.baseurl }}">
     {% if page.isHome %}
-      <link rel="stylesheet" href="{{ "/src/css/home.css" | prepend: site.baseurl }}">
+      <link rel="stylesheet" href="{{ "/src/css/landing.css" | prepend: site.baseurl }}">
     {% endif %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -24,11 +24,22 @@
       This website requires JavaScript to work. Please enable JavaScript or update your browser/computer.
     </noscript>
 
-    <button class="nav-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <nav class="bar">
+      <header class="logo">
+        <button>
+          <span class="right"></span>
+          <span class="bottom"></span>
+          <span class="point"></span>
+        </button>
+        <h1>&nbsp;~/&nbsp;Kirk M. <span class="handle">@saricden</span></h1>
+      </header>
+
+      <button class="nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
 
     <nav class="primary">
       <img src="/src/img/me.svg" alt="Kirk" />
@@ -67,10 +78,10 @@
 
     </div>
 
+    <div class="container-overlay"></div>
 
     <script type="text/javascript" src="/src/js/main.js"></script>
     {% if page.isHome %}
-      <script src="/src/js/phaser.min.js"></script>
       <script src="/src/js/home.js"></script>
     {% endif %}
   </body>

@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-<div class="contentbox">
-  <header class="page">
+<header class="page">
+  <div>
     <h1>
       <a href="/projects/">
-        Kirk M. <span class="handle">@saricden</span> presents:
         <span class="primary stretch">
           <span class="text-fade"><i class="fa fa-flask"></i></span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span>
           <span class="text-fade handle">
@@ -17,12 +16,13 @@ layout: default
         </span>
       </a>
     </h1>
-  </header>
+  </div>
+</header>
 
-  <hr class="skinny" />
-
-  <main>
+<div class="contentbox">
+  <main class="primary">
     <article class="primary">
+      <hr class="skinny" />
       <div class="text-center">
         {% for tag in page.tags %}
           <span class="tag">{{ tag }}</span>

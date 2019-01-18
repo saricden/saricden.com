@@ -5,11 +5,10 @@ layout: default
 {% assign firstWordLetters = titleWords[0] | split: "" %}
 {% assign titleRemainder = page.title | replace: titleWords[0], "" %}
 
-<div class="contentbox">
-  <header class="page">
+<header class="page">
+  <div>
     <h1>
       <a href="/blog/">
-        Kirk M. <span class="handle">@saricden</span>'s blog presents:
         <span class="primary stretch">
           {% for letter in firstWordLetters %}
             <span>{{ letter }}</span>
@@ -18,8 +17,10 @@ layout: default
         <span class="secondary">{{ titleRemainder }}</span>
       </a>
     </h1>
-  </header>
+  </div>
+</header>
 
+<div class="contentbox">
   <main class="primary">
     <article class="content">
       <header class="post">

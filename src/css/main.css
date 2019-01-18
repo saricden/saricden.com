@@ -11,6 +11,9 @@ body {
   font-weight: 400;
   overflow-x: hidden;
 }
+body.nav-open {
+  overflow-y: hidden;
+}
 h1 {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
@@ -26,8 +29,8 @@ img.box-img {
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  padding: 10px;
-  border: solid 3px #000;
+  /* padding: 10px;
+  border: solid 3px #000; */
 }
 p {
   margin: 20px 0;
@@ -51,10 +54,23 @@ a {
   text-decoration: none;
 }
 header.page {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+header.page > div {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 590px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   box-sizing: border-box;
-  padding: 35px 0;
+  padding: 20px;
+  padding-bottom: 135px;
+  padding-top: 105px;
 }
 header.page h1 {
+  flex: 1;
   font-size: 18px;
 }
 header.page h1 a {
@@ -80,22 +96,43 @@ header.page h1 .secondary {
   text-align: right;
 }
 div.container {
+  position: relative;
   margin: 0;
   padding: 0;
   transition: transform 0.5s;
   width: 100%;
-  min-height: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+  height: 100%;
+  overflow: visible;
 }
-div.container.nav-open {
+body.nav-open div.container {
   transform: translateX(-220px);
+}
+div.container-overlay {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+body.nav-open div.container-overlay {
+  transform: translateX(-220px);
+  opacity: 0.85;
+  visibility: visible;
 }
 .contentbox {
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 100px 0 20px;
+  padding: 20px;
+  padding-bottom: 0;
   max-width: 900px;
   margin: 0 auto;
+  margin-top: -100px;
 }
 .text-fade {
   color: rgba(0, 0, 0, 0.5);
@@ -105,6 +142,7 @@ main.primary {
   border-bottom: 0;
   box-sizing: border-box;
   padding: 20px;
+  background-color: #FEF24E;
 }
 nav.primary {
   position: fixed;
@@ -118,6 +156,7 @@ nav.primary {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: right;
+  box-shadow: inset 5px 0 20px -5px #000;
 
   transition: transform 0.5s;
 }
@@ -242,13 +281,9 @@ nav.social a:nth-of-type(6) {
   transition-delay: 1s;
 }
 button.nav-btn {
-  z-index: 2;
   display: block;
   width: 30px;
-  height: 30px;
-  position: fixed;
-  right: 50px;
-  top: 50px;
+  height: 22px;
   background-color: transparent;
   border: 0;
   outline: none;
@@ -262,11 +297,15 @@ button.nav-btn span {
   top: 0;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 3px;
   background-color: #000;
+  opacity: 0.25;
   border-radius: 3px;
 
   transition: transform 0.8s, top 0.8s, bottom 0.8s, opacity 0.4s;
+}
+button.nav-btn:hover span {
+  opacity: 0.8;
 }
 button.nav-btn span:nth-child(2) {
   top: 50%;
@@ -276,20 +315,149 @@ button.nav-btn span:nth-child(3) {
   top: initial;
   bottom: 0;
 }
-button.nav-btn.open {
+body.nav-open button.nav-btn {
   transform: translateX(-220px);
 }
-button.nav-btn.open span:nth-child(1) {
+body.nav-open button.nav-btn span {
+  background-color: #FFF;
+  opacity: 0.8;
+}
+body.nav-open button.nav-btn span:nth-child(1) {
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
 }
-button.nav-btn.open span:nth-child(2) {
+body.nav-open button.nav-btn span:nth-child(2) {
   opacity: 0;
 }
-button.nav-btn.open span:nth-child(3) {
+body.nav-open button.nav-btn span:nth-child(3) {
   bottom: 50%;
   transform: translateY(50%) rotate(135deg);
 }
+
+nav.bar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 40px;
+
+  transition: background-color 0.5s;
+}
+
+nav.bar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+body.nav-open nav.bar.scrolled {
+  background-color: transparent;
+}
+
+header.logo {
+  top: 20px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0.25;
+  cursor: pointer;
+
+  transition: opacity 0.4s;
+}
+
+header.logo:hover,
+body.nav-open header.logo {
+  opacity: 0.8;
+}
+
+header.logo h1 {
+  margin: 0;
+  color: #000;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+header.logo h1 .handle {
+  border: 0;
+  background-color: #000;
+  color: #FEF24E;
+}
+
+nav.bar.scrolled header.logo h1 .handle {
+  color: #FFF;
+}
+
+body.nav-open nav.bar.scrolled header.logo h1 .handle {
+  color: #000;
+}
+
+header.logo h1 strong {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+header.logo button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: solid 3px #000;
+  border-radius: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  outline: none;
+}
+
+header.logo button span {
+  position: absolute;
+  background-color: #000;
+}
+
+header.logo button .right {
+  top: 0;
+  left: 10px;
+  height: 100%;
+  width: 3px;
+}
+
+header.logo button .bottom {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+header.logo button .point {
+  left: 50%;
+  bottom: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+}
+
+body.nav-open header.logo h1 {
+  color: #FFF;
+}
+
+body.nav-open header.logo h1 .handle {
+  background-color: #FFF;
+  color: #000;
+}
+
+body.nav-open header.logo button span {
+  background-color: #FFF;
+}
+
+body.nav-open header.logo button {
+  border-color: #FFF;
+}
+
 article.snippet {
   display: flex;
   flex-direction: row;
@@ -336,6 +504,7 @@ article.project {
   padding: 20px;
   box-sizing: border-box;
   align-items: flex-start;
+  background-color: #FEF24E;
 }
 article.project p {
   margin: 0 0 5px 0;
@@ -438,6 +607,70 @@ hr.skinny:first-of-type {
 .text-center {
   text-align: center;
 }
+
+/* Easter eggs */
+@keyframes logoEasterEgg {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+body.egg-active header.logo button,
+body.egg-active > *:not(.bar) {
+  animation-name: logoEasterEgg;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* NYE countdown */
+div.nye-countdown {
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #000;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+div.nye-countdown.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+div.nye-countdown > span {
+  font-size: 50px;
+  font-weight: 600;
+
+  transform: scale(0);
+  opacity: 1;
+  transition: none;
+}
+div.nye-countdown > span.growing {
+  transform: scale(1.75);
+  opacity: 0;
+  transition: transform 0.75s, opacity 0.75s;
+}
+
+@media (max-width: 1175px) {
+  nav.bar {
+    padding: 10px;
+  }
+}
 @media (max-width: 800px) {
   .project-cols article.project {
     flex-basis: calc(50% - 10px);
@@ -446,9 +679,6 @@ hr.skinny:first-of-type {
 @media (max-width: 650px) {
   button.nav-btn {
     right: 20px;
-  }
-  .contentbox {
-    padding-right: 70px;
   }
   header.page h1 .primary {
     font-size: 50px;
@@ -461,6 +691,9 @@ hr.skinny:first-of-type {
   }
 }
 @media (max-width: 600px) {
+  header.logo h1 {
+    display: none;
+  }
   article.snippet {
     flex-direction: column;
     align-items: center;

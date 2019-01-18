@@ -6,10 +6,9 @@ isProjects: true
 ---
 {% assign projects = site.categories.projects | sort: "order" %}
 
-<div class="contentbox">
-  <header class="page">
-    <h1>
-      Kirk M. <span class="handle">@saricden</span>'s digital
+<header class="page">
+  <div>
+    <h1 data-parallax-offset="-700">
       <span class="primary stretch">
         <span class="text-fade"><i class="fa fa-flask"></i></span><span>P</span><span>r</span><span>o</span><span>j</span><span>e</span><span>c</span><span>t</span><span>s</span>
       </span>
@@ -17,8 +16,10 @@ isProjects: true
         Websites, Apps & Games
       </span>
     </h1>
-  </header>
+  </div>
+</header>
 
+<div class="contentbox" data-parallax-offset="-700">
   <main>
     {% for project in projects %}
       {% if project.featured %}
