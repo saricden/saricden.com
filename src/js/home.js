@@ -809,14 +809,4 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('[data-quiz-share]').forEach(function(button) {
     button.addEventListener('click', socialDispatch);
   });
-
-  /* PARALLAX BIZNESS
-  --------------------------------- */
-  var ytPlayer = document.querySelector('iframe.yt-player');
-  ytPlayer.addEventListener('load', function() {
-    var iframeDoc = this.contentWindow.document;
-    var userHeader = iframeDoc.querySelector('div.ytp-chrome-top');
-    console.log(userHeader);
-    userHeader.style.display = "none";
-  });
 });
