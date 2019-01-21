@@ -615,7 +615,7 @@ document.addEventListener('DOMContentLoaded', function() {
         );
       break;
 
-      case 'contribute-yes':
+      case 'contribute-no':
         // User selected no to being open to contributing
         isContributor = false;
         focusButton(button);
@@ -714,7 +714,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Birthday fields don't need validation as they're always filled.
 
     // Collect all the form attributes
-    this._action = this._form.getAttribute("action");
+    this._action = this._form.getAttribute("data-"+chosenRole+"-action");
     this._first = this._form.querySelector("input[name='FNAME']").value;
     this._last = this._form.querySelector("input[name='LNAME']").value;
     this._email = this._form.querySelector("input[name='EMAIL']").value;
