@@ -702,12 +702,12 @@ document.addEventListener('DOMContentLoaded', function() {
     finalErrorNode.classList.remove('active');
     if (errorCount === 1) {
       finalErrorNode.classList.add('active');
-      finalErrorNode.innerHTML = "There was "+errorCount+" error in your subscription. It has been highlighted above. Please correct and re-submit!";
+      finalErrorNode.innerHTML = "There was "+errorCount+" error in your subscription. It has been highlighted above. Please review your submission, make correct the error, and re-submit!";
       return false;
     }
     else if (errorCount > 0) {
       finalErrorNode.classList.add('active');
-      finalErrorNode.innerHTML = "There were "+errorCount+" errors in your subscription. They have been highlighted above. Please correct and re-submit!";
+      finalErrorNode.innerHTML = "There were "+errorCount+" errors in your subscription. They have been highlighted above. Please review your submission, correct the errors, and re-submit!";
       return false;
     }
 
