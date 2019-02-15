@@ -9,10 +9,13 @@
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poor+Story" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400+600" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/src/css/main.css" | prepend: site.baseurl }}">
+    {% if page.isQuiz %}
+      <link rel="stylesheet" href="{{ "/src/css/quiz.css" | prepend: site.baseurl }}">
+    {% endif %}
     {% if page.isHome %}
-      <link rel="stylesheet" href="{{ "/src/css/landing.css" | prepend: site.baseurl }}">
+      <link rel="stylesheet" href="{{ "/src/css/home.css" | prepend: site.baseurl }}">
     {% endif %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -80,9 +83,13 @@
 
     <div class="container-overlay"></div>
 
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script type="text/javascript" src="/src/js/main.js"></script>
+    {% if page.isQuiz %}
+      <script src="/src/js/quiz.js"></script>
+    {% endif %}
     {% if page.isHome %}
-      <script src="/src/js/home.js"></script>
+      <script src="/src/js/home2.js"></script>
     {% endif %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120852949-3"></script>

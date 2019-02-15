@@ -512,7 +512,8 @@ header.logo h1 {
   overflow: hidden;
 }
 
-header.logo h1 .handle {
+header.logo h1 .handle,
+.handle.dark {
   border: 0;
   background-color: #000;
   color: #FEF24E;
