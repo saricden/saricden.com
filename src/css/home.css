@@ -12,7 +12,12 @@ header.logo h1 {
   display: none;
 }
 
-.flowbox {
+.flowbox,
+.video-flowbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 20px;
@@ -21,6 +26,40 @@ header.logo h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 1.6s, opacity 0.6s, visibility 0.6s;
+}
+
+.flowbox.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-flowbox.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fluid-video {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.fluid-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 header.primary {
@@ -150,5 +189,14 @@ footer.primary a {
 
   header.primary h1 {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .twitch-countdown header {
+    font-size: 1.2rem;
+  }
+  .twitch-countdown > div {
+    font-size: 0.7rem;
   }
 }

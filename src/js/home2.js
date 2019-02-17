@@ -10,7 +10,11 @@ var Homepage = function(config) {
     days: document.querySelector('.days'),
     hours: document.querySelector('.hours'),
     minutes: document.querySelector('.minutes'),
-    seconds: document.querySelector('.seconds')
+    seconds: document.querySelector('.seconds'),
+    videoBtn: document.querySelector('.btn-video'),
+    backBtn: document.querySelector('.btn-back'),
+    mainContainer: document.querySelector('.flowbox'),
+    videoContainer: document.querySelector('.video-flowbox')
   };
 
   var updateTicker = function() {
@@ -44,13 +48,31 @@ var Homepage = function(config) {
     dom.seconds.innerHTML = '<em>'+seconds+(seconds === 1 ? '</em> second' : '</em> seconds');
   };
 
+  var openVideo = function(e) {
+    e.preventDefault();
+    dom.mainContainer.classList.add('hidden');
+    dom.videoContainer.classList.remove('hidden');
+  };
+
+  var closeVideo = function(e) {
+    e.preventDefault();
+    dom.mainContainer.classList.remove('hidden');
+    dom.videoContainer.classList.add('hidden');
+  };
+
   // var initAJAX = function() {
   //   var 
   // };
   
+  var bindEvents = function() {
+    dom.videoBtn.addEventListener('click', openVideo);
+    dom.backBtn.addEventListener('click', closeVideo);
+  };
+
   // Init
   updateTicker();
   setInterval(updateTicker, 1000);
+  bindEvents();
 };
 
 Homepage({
