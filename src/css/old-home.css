@@ -1,0 +1,202 @@
+:root {
+  font-size: 17px;
+}
+
+em {
+  font-style: unset;
+  font-size: 2.2rem;
+}
+
+/* Just for homepage: */
+header.logo h1 {
+  display: none;
+}
+
+.flowbox,
+.video-flowbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 1.6s, opacity 0.6s, visibility 0.6s;
+}
+
+.flowbox.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video-flowbox.hidden {
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fluid-video {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.fluid-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header.primary {
+  width: 100%;
+  max-width: 31rem;
+  line-height: 3.5rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img.profile {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 100%;
+  box-sizing: border-box;
+  padding: 0.25rem;
+  border: solid 2px #000;
+  margin-bottom: 2rem;
+}
+header.primary h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+header.primary h1 .handle {
+  line-height: normal;
+}
+header.primary h1 em {
+  display: block;
+}
+
+.twitch-countdown {
+  width: 100%;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 2rem;
+  border: solid 2px #000;
+  border-radius: 5px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.twitch-countdown a {
+  text-decoration: underline;
+}
+.twitch-countdown header {
+  width: 100%;
+  text-align: center;
+}
+.twitch-countdown > div {
+  font-size: 1rem;
+}
+
+ul.cols-connect {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul.cols-connect li {
+  width: calc(100% / 4);
+  padding: 0.8rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+ul.cols-connect li header {
+  font-weight: 600;
+}
+
+ul.cols-connect li i {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+footer.primary {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+footer.primary a {
+  font-size: 1.8rem;
+  margin: 15px;
+}
+
+.control {
+  width: 100%;
+  text-align: center;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn.btn-glass {
+  padding: 10px 25px;
+  border: solid 2px #000;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  line-height: 1.25rem;
+}
+
+@media (max-width: 700px) {
+  ul.cols-connect li {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 15px;
+  }
+
+  header.primary h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .twitch-countdown header {
+    font-size: 1.2rem;
+  }
+  .twitch-countdown > div {
+    font-size: 0.7rem;
+  }
+}

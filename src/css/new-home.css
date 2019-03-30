@@ -1,0 +1,262 @@
+:root {
+  font-size: 18px;
+}
+
+em {
+  font-style: normal;
+}
+
+strong {
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+.centerblock,
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.centerblock.full {
+  height: 100%;
+}
+
+.inner {
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header.mantra {
+  width: 100%;
+  min-height: 100vh;
+  background: url(/src/img/new-bg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header.mantra .tint {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FEF24E;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+header.mantra h1 {
+  font-size: 4rem;
+  /* font-size: calc(20vmin - 4rem); */
+  /* font-size: calc(3rem - 0.5vw); */
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.6rem;
+  line-height: 1em;
+  text-align: left;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #FFF;
+  margin-bottom: 4rem;
+  margin-top: auto;
+}
+
+header.mantra h1 em {
+  color: #FFF;
+}
+
+header.mantra button.circle {
+  margin-top: auto;
+  background-color: transparent;
+  color: #FFF;
+  /* box-shadow: 0 0 15px #FFF; */
+  border: solid 1px #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* border: 0; */
+  border-radius: 100%;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 615px) {
+  header.mantra h1 {
+    font-size: 2.5rem;
+  }
+  header.mantra button.primary {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  header.mantra h1 {
+    font-size: 1.5rem;
+  }
+  header.mantra button.primary {
+    font-size: 0.75rem;
+  }
+}
+
+.panel {
+  padding: 4rem;
+}
+
+.panel.what .col {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.panel.what .col i {
+  font-size: 2rem;
+}
+
+.panel.what p {
+  width: 100%;
+  text-align: justify;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+}
+
+.panel.what p em {
+  text-decoration: underline;
+  font-size: 1.75rem;
+}
+
+.panel.what p strong {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 2rem;
+  background-color: #000;
+  color: #FEF24E;
+  margin: 1rem 0;
+}
+
+.col-game {
+  width: 100%;
+  max-width: 850px;
+  margin: 2rem auto;
+  margin-bottom: 0;
+}
+
+.game-box {
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 4px #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.game-box iframe {
+  display: block;
+  width: calc(100% - 1.5rem);
+  height: 400px;
+  box-sizing: border-box;
+  margin: 0.75rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.85);
+}
+
+.game-box header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+}
+
+.game-box header > div {
+  width: auto;
+}
+
+.game-box header .version {
+  font-size: 1rem;
+  padding: 0.15rem 0.35rem;
+  border: solid 1px #000;
+  vertical-align: middle;
+  
+}
+
+.game-box header button {
+  padding: 0 1rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #FEF24E;
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+
+.game-box header button i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+
+.stat-cols {
+  margin: 2rem auto 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.stat-cols > div {
+  text-align: center;
+}
+
+.stat-cols > div strong {
+  font-size: 4rem;
+}
+
+
+
+
+
+.center-self {
+  margin: 2rem auto;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.5rem !important;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: dotted 2px #FEF24E;
+  color: #FEF24E;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.extra-spacing {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
