@@ -42,7 +42,7 @@ header.mantra {
 }
 
 header.mantra .tint {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.65);
   color: #FEF24E;
   box-sizing: border-box;
   padding: 2rem;
@@ -73,12 +73,8 @@ header.mantra button.circle {
   margin-top: auto;
   background-color: transparent;
   color: #FFF;
-  /* box-shadow: 0 0 15px #FFF; */
-  border: solid 1px #FFF;
-  font-family: 'Montserrat', sans-serif;
+  border: solid 2px #FFF;
   font-size: 1.25rem;
-  font-weight: 600;
-  /* border: 0; */
   border-radius: 100%;
   padding: 0;
   width: 3rem;
@@ -161,8 +157,8 @@ header.mantra button.circle {
 .game-box {
   width: 100%;
   box-sizing: border-box;
-  border: solid 4px #000;
   background-color: rgba(0, 0, 0, 0.15);
+  padding-top: 0.75rem;
 }
 .game-box iframe {
   display: block;
@@ -170,6 +166,7 @@ header.mantra button.circle {
   height: 400px;
   box-sizing: border-box;
   margin: 0.75rem;
+  margin-top: 0;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.85);
 }
 
@@ -235,7 +232,22 @@ header.mantra button.circle {
   font-size: 4rem;
 }
 
+.btn-col {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+button.cta {
+  background-color: transparent;
+  border: solid 2px #000;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  outline: none;
+  cursor: pointer;
+}
 
 
 
