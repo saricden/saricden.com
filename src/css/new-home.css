@@ -107,6 +107,10 @@ header.mantra button.circle {
   padding: 4rem;
 }
 
+.panel.what {
+  padding-top: 0;
+}
+
 .panel.what .col {
   width: 100%;
   max-width: 350px;
@@ -357,4 +361,101 @@ p.lead {
 .extra-spacing {
   margin-top: 4rem;
   margin-bottom: 2rem;
+}
+
+.panel.patronage {
+  background-color: #000;
+  color: #FEF24E;
+}
+
+.panel.patronage h1 {
+  text-align: center;
+}
+
+.panel.patronage .col.blurb {
+  max-width: 38rem;
+  padding: 2rem;
+}
+.panel.patronage .col.blurb:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.panel.patronage .col.blurb img {
+  border-radius: 100%;
+  float: left;
+  margin: 1rem;
+}
+
+.panel.patronage .col.blurb p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+.author {
+  font-size: 1.25rem;
+  text-align: right;
+}
+
+.patron-tiers {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.patron-tiers .col {
+  width: 22%;
+  border: solid 1px #FEF24E;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+}
+
+.patron-tiers .col header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-bottom: solid 1px #FEF24E;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.patron-tiers .col ul {
+  margin: 0;
+  margin-bottom: auto;
+  padding: 1rem 1rem 2rem 2rem;
+  font-size: 0.9rem;
+}
+
+.patron-tiers .col ul li {
+  margin-bottom: 0.75rem;
+}
+
+.patron-tiers .col .price {
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.patron-tiers .col .price strong {
+  font-size: 2rem;
+  display: block;
+}
+
+.patron-tiers .col .btn {
+  display: block;
+  margin: 1rem auto;
+  width: calc(100% - 2rem);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  background-color: #FEF24E;
+  color: #000;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
 }
