@@ -249,7 +249,93 @@ button.cta {
   cursor: pointer;
 }
 
+.panel.video .centerblock {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.panel.video .centerblock .col {
+  width: 50%;
+  padding: 2rem;
+}
+
+header.freedom-to {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+div.freedom-ticker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  padding: 0;
+  border: solid 5px transparent;
+  overflow: hidden;
+  height: 56px;
+}
+
+div.freedom-ticker {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  padding: 0;
+  border: solid 5px transparent;
+  overflow: hidden;
+  height: 56px;
+}
+
+div.freedom-ticker span {
+  font-size: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+div.freedom-ticker ul {
+  margin: 0 20px;
+  padding: 0;
+  list-style: none;
+
+  transition: transform 0.75s;
+}
+
+div.freedom-ticker ul li {
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+}
+
+p.lead {
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: solid 3px rgba(0, 0, 0, 0.25);
+  line-height: 2em;
+}
+
+.fluid-video {
+  width: 100%;
+  height: 0;
+  padding: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.fluid-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .center-self {
   margin: 2rem auto;
