@@ -408,21 +408,46 @@ p.lead {
 
 .patron-tiers .col {
   width: 22%;
-  border: solid 1px #FEF24E;
+  border: solid 1px #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 0.5rem;
+  color: #000;
+  background-color: #FEF24E;
+  box-shadow: 0 0 10px #FFF;
+}
+
+.patron-tiers .col.featured {
+  transform: scale(1.09);
+  box-shadow: 0 0 25px #FFF;
 }
 
 .patron-tiers .col header {
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
-  border-bottom: solid 1px #FEF24E;
+  border-bottom: dashed 2px #000;
   text-align: center;
   font-size: 1.25rem;
+}
+
+.patron-tiers .col em {
+  opacity: 0.75;
+  text-decoration: line-through;
+}
+.patron-tiers .col li:nth-of-type(4) em {
+  opacity: 0.8;
+}
+.patron-tiers .col li:nth-of-type(5) em {
+  opacity: 0.6;
+}
+.patron-tiers .col li:nth-of-type(6) em {
+  opacity: 0.4;
+}
+.patron-tiers .col li:nth-of-type(7) em {
+  opacity: 0.2;
 }
 
 .patron-tiers .col ul {
@@ -453,8 +478,8 @@ p.lead {
   width: calc(100% - 2rem);
   box-sizing: border-box;
   padding: 0.5rem 1rem;
-  background-color: #FEF24E;
-  color: #000;
+  background-color: #000;
+  color: #FEF24E;
   text-align: center;
   font-size: 1.25rem;
   border-radius: 0.5rem;
