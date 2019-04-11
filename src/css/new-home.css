@@ -10,8 +10,37 @@ strong {
   font-weight: normal;
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
 p {
   margin: 0;
+}
+
+p.box-sm {
+  max-width: 36rem;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem 0.5rem;
+  color: inherit;
+}
+a.btn {
+  padding: 0.75rem 1.5rem;
+  border: solid 1px;
+  border-radius: 0.5rem;
+}
+* + a.btn {
+  margin-top: 2rem;
+}
+
+i.lead {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .centerblock,
@@ -107,6 +136,11 @@ header.mantra button.circle {
   padding: 4rem;
 }
 
+.panel.dark {
+  background-color: #000;
+  color: #FEF24E;
+}
+
 .panel.what {
   padding-top: 0;
 }
@@ -149,6 +183,7 @@ header.mantra button.circle {
   background-color: #000;
   color: #FEF24E;
   margin: 1rem 0;
+  padding: 0 0.75rem;
 }
 
 .col-game {
@@ -273,6 +308,10 @@ header.freedom-to {
   margin-bottom: 10px;
 }
 
+header.freedom-to h1 {
+  margin: 0;
+}
+
 div.freedom-ticker {
   display: flex;
   flex-direction: row;
@@ -363,18 +402,15 @@ p.lead {
   margin-bottom: 2rem;
 }
 
-.panel.patronage {
-  background-color: #000;
-  color: #FEF24E;
-}
-
 .panel.patronage h1 {
   text-align: center;
 }
 
 .panel.patronage .col.blurb {
   max-width: 38rem;
-  padding: 2rem;
+  padding: 0 2rem;
+  margin: 0;
+  margin-bottom: 2rem;
 }
 .panel.patronage .col.blurb:after {
   display: block;
@@ -484,3 +520,73 @@ p.lead {
   font-size: 1.25rem;
   border-radius: 0.5rem;
 }
+
+.panel.twitch {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.panel.twitch .centerblock {
+  min-height: calc(100vh - 8rem);
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.panel.twitch .centerblock .col {
+  width: 50%;
+}
+.panel.twitch .centerblock .full-row {
+  width: 100%;
+  margin-top: 2rem;
+}
+.panel.twitch .centerblock .full-row.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel.twitch .centerblock .col.icon {
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel.twitch h1 {
+  margin-bottom: 1rem;
+}
+
+.twitch-countdown {
+  width: 100%;
+  max-width: 30rem;
+}
+
+.twitch-countdown header {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.twitch-countdown .countdown {
+  border: solid 3px #000;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.twitch-countdown em {
+  font-size: 2rem;
+}
+
+.btn.btn-lg {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+

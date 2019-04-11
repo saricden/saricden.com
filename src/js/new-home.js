@@ -51,9 +51,60 @@ function scrollSpy() {
   }
 }
 
+function calcTime(offset) {
+  d = new Date();
+  utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+  nd = new Date(utc + (3600000*offset));
+  return nd;
+}
+
+function updateTicker() {
+  // Date representation of now and next stream (PST)
+  var now = calcTime('-8');
+  var nextStream = calcTime('-8');
+
+  // Set next stream to 6:30pm
+  nextStream.setHours(18);
+  nextStream.setMinutes(30);
+  nextStream.setSeconds(0);
+
+  if (now > nextStream) {
+    nextStream.setDate(nextStream.getDate() + 2);
+  }
+
+  if (now.getDay() === 0 || now.getDay() === 6) {
+    // https://stackoverflow.com/questions/33078406/getting-the-date-of-next-monday
+    // Set the next stream to next Monday
+    nextStream.setDate(nextStream.getDate() + (1 + 7 - nextStream.getDay()) % 7);
+  }
+
+  // Tuesday or Thursday
+  if (now.getDay() === 2 || now.getDay() === 4) {
+    nextStream.setDate(nextStream.getDate() + 1);
+  }
+
+  var seconds = Math.floor((nextStream - (now)) / 1000);
+  var minutes = Math.floor(seconds / 60);
+  var hours = Math.floor(minutes / 60);
+  var days = Math.floor(hours / 24);
+
+  hours = hours - (days * 24);
+  minutes = minutes - (days * 24 * 60) - (hours * 60);
+  seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+
+  daysDOM.innerHTML = '<em>'+days+(days === 1 ? '</em> day' : '</em> days');
+  hoursDOM.innerHTML = '<em>'+hours+(hours === 1 ? '</em> hour' : '</em> hours');
+  minutesDOM.innerHTML = '<em>'+minutes+(minutes === 1 ? '</em> minute' : '</em> minutes');
+  secondsDOM.innerHTML = '<em>'+seconds+(seconds === 1 ? '</em> second' : '</em> seconds');
+}
+
 var counterCodeLn = document.getElementById('counter-codeln');
 var counterCommits = document.getElementById('counter-commits');
 var counterContrib = document.getElementById('counter-contrib');
+var daysDOM = document.querySelector('.days');
+var hoursDOM = document.querySelector('.hours');
+var minutesDOM = document.querySelector('.minutes');
+var secondsDOM = document.querySelector('.seconds');
 
 var totalLines = 0;
 var totalCommits = 0;
@@ -93,12 +144,15 @@ var tickerItemHeight = (tickerItems[0].clientHeight);
 var tickerItemCount = (tickerItems.length);
 var lastRandomIndex = 0;
 
+// Setting things on timers
 setInterval(function() {
   var randomIndex = getRandomButExclude(0, (tickerItemCount - 1), lastRandomIndex);
   var translateOffset = (randomIndex * tickerItemHeight);
   tickerList.style.transform = 'translateY(-'+translateOffset+'px)';
   lastRandomIndex = randomIndex;
 }, 2000);
+
+setInterval(updateTicker, 1000);
 
 // Binding events
 window.addEventListener('scroll', scrollSpy);
