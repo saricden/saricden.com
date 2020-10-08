@@ -1,0 +1,87 @@
+{
+  "frames": {
+    "frame_00001.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 180,
+        "h": 183
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 64,
+        "y": 17,
+        "w": 180,
+        "h": 183
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "frame_00002.png": {
+      "frame": {
+        "x": 0,
+        "y": 183,
+        "w": 179,
+        "h": 183
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 66,
+        "y": 17,
+        "w": 179,
+        "h": 183
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "frame_00003.png": {
+      "frame": {
+        "x": 0,
+        "y": 366,
+        "w": 177,
+        "h": 183
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 67,
+        "y": 17,
+        "w": 177,
+        "h": 183
+      },
+      "sourceSize": {
+        "w": 300,
+        "h": 200
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    }
+  },
+  "meta": {
+    "app": "http://free-tex-packer.com",
+    "version": "0.6.6",
+    "image": "me-desk.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 180,
+      "h": 549
+    },
+    "scale": 1
+  }
+}
