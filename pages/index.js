@@ -7,6 +7,15 @@ class Home extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      untilNextStream: {
+        days: null,
+        hours: null,
+        minutes: null,
+        seconds: null
+      }
+    };
+
     this.canvasRef = null;
     this.containerRef = null;
 
@@ -22,7 +31,51 @@ class Home extends Component {
     this.containerRef = element;
   }
 
+  getNextStreamInterval() {
+    const now = DateTime.local();
+    console.log(now.ts);
+    const start = DateTime.local()
+  }
+
   async componentDidMount() {
+    const dayIndex = 5; // Friday
+    const nextFriday = new Date();
+
+    const nextStreamUTC = new Date();
+    nextStreamUTC.setUTCDate(nextStreamUTC.getDate() + (dayIndex - nextFriday.getDay() + 7) % 7);
+    nextStreamUTC.setUTCHours(23, 0, 0, 0); // 11pm UTC = 4pm PDT
+
+    const now = (new Date().getTime() / 1000);
+    const streamTime = (nextStreamUTC.getTime() / 1000);
+    let seconds = streamTime - now;
+
+    setInterval(() => {
+      const days        = Math.floor(seconds/24/60/60);
+      const hoursLeft   = Math.floor((seconds) - (days*86400));
+      const hours       = Math.floor(hoursLeft/3600);
+      const minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+      const minutes     = Math.floor(minutesLeft/60);
+      const remainingSeconds = Math.floor(seconds % 60);
+
+      const untilNextStream = {
+        days,
+        hours,
+        minutes,
+        seconds: remainingSeconds
+      };
+
+      this.setState({ untilNextStream });
+
+      if (seconds === 0) {
+        clearInterval(countdownTimer);
+        console.log('DONE');
+      } else {
+        seconds--;
+      }
+    }, 1000);
+
+    
+
     if (this.canvasRef && this.containerRef && typeof window !== 'undefined') {
       const Phaser = (await import('phaser')).default;
       const BootScene = (await import('../phaser_scenes/BootScene')).default;
@@ -58,6 +111,11 @@ class Home extends Component {
   }
 
   render() {
+    const {untilNextStream} = this.state;
+    const {days, hours, minutes, seconds} = untilNextStream;
+
+    const counterVisible = (days !== null && hours !== null && minutes !== null && seconds !== null);
+
     return (
       <main>
         <Head>
@@ -78,11 +136,14 @@ class Home extends Component {
 
         <header>
           <h1>Kirk M. (@saricden) is a game dev streamer on Twitch.tv</h1>
-          <p>
+          <p style={{
+            visibility: (counterVisible ? 'visible' : 'hidden')
+          }}>
             <span>Live in</span>
-            <span><strong>4</strong> days</span>
-            <span><strong>3</strong> hours</span>
-            <span><strong>34</strong> seconds</span>
+            <span><strong>{days}</strong>d</span>
+            <span><strong>{hours}</strong>h</span>
+            <span><strong>{minutes}</strong>m</span>
+            <span><strong>{seconds}</strong>s</span>
           </p>
           <a className="btn" href="https://twitch.tv/saricden" target="_blank">
             <i className="fa fa-twitch" />
@@ -99,6 +160,9 @@ class Home extends Component {
             <div className="social-links">
               <a href="https://www.twitch.tv/saricden" target="_blank">
                 <i className="fa fa-twitch" />
+              </a>
+              <a href="https://www.youtube.com/channel/UCKcZ5BgUNa40bEBt08LAfMg" target="_blank">
+                <i className="fa fa-youtube-play" />
               </a>
               <a href="https://github.com/saricden" target="_blank">
                 <i className="fa fa-github" />
