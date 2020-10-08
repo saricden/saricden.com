@@ -217,7 +217,6 @@ section > * {
 }
 
 .social-links {
-  font-size: 4rem;
   margin-top: 2rem;
 }
 
@@ -227,6 +226,10 @@ section > * {
 
 .social-links a:last-of-type {
   margin-right: 0;
+}
+
+.social-links svg {
+  height: 4rem;
 }
 
 .centerbox {
