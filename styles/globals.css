@@ -102,6 +102,13 @@ header {
   padding-bottom: 9rem;
 }
 
+header.inline {
+  position: static;
+  min-height: 100vh;
+  background-color: #88CCF3;
+  max-width: none;
+}
+
 header h1 {
   font-size: 2.5rem;
   margin: 0;
@@ -125,6 +132,10 @@ header a {
 }
 
 a.btn {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 1.8rem;
   border: solid 1px #000;
   background-color: rgba(255, 255, 255, 0.25);
@@ -132,8 +143,13 @@ a.btn {
   border-radius: 2rem;
 }
 
-a.btn i {
+a.btn i,
+a.btn svg {
   margin-right: 0.5rem;
+}
+
+a.btn svg {
+  height: 2.4rem;  
 }
 
 .center-row {
@@ -204,6 +220,32 @@ section > * {
 
 .social-links a:last-of-type {
   margin-right: 0;
+}
+
+.centerbox {
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.discord-userbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.discord-userbox > img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  border: solid 1px #333;
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.martop {
+  margin-top: 2rem;
 }
 
 @media (max-width: 1050px) {

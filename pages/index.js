@@ -19,6 +19,8 @@ class Home extends Component {
     this.canvasRef = null;
     this.containerRef = null;
 
+    this.timer = null;
+
     this.setCanvasRef = this.setCanvasRef.bind(this);
     this.setContainerRef = this.setContainerRef.bind(this);
   }
@@ -49,7 +51,7 @@ class Home extends Component {
     const streamTime = (nextStreamUTC.getTime() / 1000);
     let seconds = streamTime - now;
 
-    setInterval(() => {
+    this.timer = setInterval(() => {
       const days        = Math.floor(seconds/24/60/60);
       const hoursLeft   = Math.floor((seconds) - (days*86400));
       const hours       = Math.floor(hoursLeft/3600);
@@ -107,6 +109,12 @@ class Home extends Component {
       };
 
       const game = new Game(config);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.timer) {
+      clearInterval(this.timer);
     }
   }
 
@@ -187,7 +195,7 @@ class Home extends Component {
         </section>
 
         <nav className="bottom">
-          <Link href="/streams">
+          <Link href="/">
             <a>
               <img src="/tv.svg" alt="" />
               <span>Streams</span>
