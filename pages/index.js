@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {Component} from 'react';
 
 class Home extends Component {
@@ -132,11 +131,7 @@ class Home extends Component {
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous" />
         </Head>
 
-        <nav className="top">
-          <Link href="/">
-            <a><img src="/me.svg" alt="Kirk M. (@saricden)" /></a>
-          </Link>
-        </nav>
+        
 
         <div className="canvas-con" ref={this.setContainerRef}>
           <canvas ref={this.setCanvasRef}>Need JS</canvas>
@@ -193,29 +188,6 @@ class Home extends Component {
             </div>
           </div>
         </section>
-
-        <nav className="bottom">
-          <Link href="/">
-            <a>
-              <img src="/tv.svg" alt="" />
-              <span>Streams</span>
-            </a>
-          </Link>
-
-          <Link href="/open-haven">
-            <a>
-              <img src="/open-haven.svg" alt="" />
-              <span>Open Haven</span>
-            </a>
-          </Link>
-
-          <Link href="/projects">
-            <a>
-              <img src="/folder.svg" alt="" />
-              <span>Projects</span>
-            </a>
-          </Link>
-        </nav>
       </main>
     );
   }

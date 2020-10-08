@@ -77,6 +77,13 @@ nav.bottom a {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  opacity: 0.75;
+
+  transition: opacity 0.5s;
+}
+
+nav.bottom a.active {
+  opacity: 1;
 }
 
 nav.bottom a img {

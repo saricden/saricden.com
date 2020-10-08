@@ -32,12 +32,6 @@ class OpenHaven extends Component {
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous" />
         </Head>
 
-        <nav className="top">
-          <Link href="/">
-            <a><img src="/me.svg" alt="Kirk M. (@saricden)" /></a>
-          </Link>
-        </nav>
-
         <header className="inline">
           <div className="centerbox">
             <h1>Open Haven is an online community of creators who believe in the awesomeness of open source technology.</h1>
@@ -70,29 +64,6 @@ class OpenHaven extends Component {
             }
           </div>
         </header>
-
-        <nav className="bottom">
-          <Link href="/">
-            <a>
-              <img src="/tv.svg" alt="" />
-              <span>Streams</span>
-            </a>
-          </Link>
-
-          <Link href="/open-haven">
-            <a>
-              <img src="/open-haven.svg" alt="" />
-              <span>Open Haven</span>
-            </a>
-          </Link>
-
-          <Link href="/projects">
-            <a>
-              <img src="/folder.svg" alt="" />
-              <span>Projects</span>
-            </a>
-          </Link>
-        </nav>
       </main>
     );
   }
