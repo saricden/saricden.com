@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTwitch, faYoutube, faGithub, faStackOverflow, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons';
 
 class Home extends Component {
 
@@ -129,14 +130,9 @@ class Home extends Component {
         <Head>
           <title>Kirk M. (@saricden) - Game Dev Streamer</title>
           <link rel="icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous" />
         </Head>
 
-        <nav className="top">
-          <Link href="/">
-            <a><img src="/me.svg" alt="Kirk M. (@saricden)" /></a>
-          </Link>
-        </nav>
+        
 
         <div className="canvas-con" ref={this.setContainerRef}>
           <canvas ref={this.setCanvasRef}>Need JS</canvas>
@@ -154,7 +150,7 @@ class Home extends Component {
             <span><strong>{seconds}</strong>s</span>
           </p>
           <a className="btn" href="https://twitch.tv/saricden" target="_blank">
-            <i className="fa fa-twitch" />
+            <FontAwesomeIcon icon={faTwitch} />
             Follow on Twitch
           </a>
           <a>Learn More</a>
@@ -167,22 +163,22 @@ class Home extends Component {
             </h2>
             <div className="social-links">
               <a href="https://www.twitch.tv/saricden" target="_blank">
-                <i className="fa fa-twitch" />
+                <FontAwesomeIcon icon={faTwitch} />
               </a>
               <a href="https://www.youtube.com/channel/UCKcZ5BgUNa40bEBt08LAfMg" target="_blank">
-                <i className="fa fa-youtube-play" />
+                <FontAwesomeIcon icon={faYoutube} />
               </a>
               <a href="https://github.com/saricden" target="_blank">
-                <i className="fa fa-github" />
+                <FontAwesomeIcon icon={faGithub} />
               </a>
               <a href="https://stackoverflow.com/users/1705378/saricden?tab=profile" target="_blank">
-                <i className="fa fa-stack-overflow" />
+                <FontAwesomeIcon icon={faStackOverflow} />
               </a>
               <a href="https://twitter.com/saricden" target="_blank">
-                <i className="fa fa-twitter" />
+                <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a href="https://www.instagram.com/saricden" target="_blank">
-                <i className="fa fa-instagram" />
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>
           </div>
@@ -193,29 +189,6 @@ class Home extends Component {
             </div>
           </div>
         </section>
-
-        <nav className="bottom">
-          <Link href="/">
-            <a>
-              <img src="/tv.svg" alt="" />
-              <span>Streams</span>
-            </a>
-          </Link>
-
-          <Link href="/open-haven">
-            <a>
-              <img src="/open-haven.svg" alt="" />
-              <span>Open Haven</span>
-            </a>
-          </Link>
-
-          <Link href="/projects">
-            <a>
-              <img src="/folder.svg" alt="" />
-              <span>Projects</span>
-            </a>
-          </Link>
-        </nav>
       </main>
     );
   }

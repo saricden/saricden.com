@@ -77,6 +77,13 @@ nav.bottom a {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  opacity: 0.75;
+
+  transition: opacity 0.5s;
+}
+
+nav.bottom a.active {
+  opacity: 1;
 }
 
 nav.bottom a img {
@@ -104,9 +111,10 @@ header {
 
 header.inline {
   position: static;
-  min-height: 100vh;
+  min-height: calc(100vh - 7.5rem);
   background-color: #88CCF3;
   max-width: none;
+  padding-bottom: 0;
 }
 
 header h1 {
@@ -141,6 +149,11 @@ a.btn {
   background-color: rgba(255, 255, 255, 0.25);
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+}
+
+a.btn.full {
+  display: flex;
+  justify-content: center;
 }
 
 a.btn i,
@@ -210,7 +223,6 @@ section > * {
 }
 
 .social-links {
-  font-size: 4rem;
   margin-top: 2rem;
 }
 
@@ -220,6 +232,10 @@ section > * {
 
 .social-links a:last-of-type {
   margin-right: 0;
+}
+
+.social-links svg {
+  height: 4rem;
 }
 
 .centerbox {
@@ -246,6 +262,77 @@ section > * {
 
 .martop {
   margin-top: 2rem;
+}
+
+.column-gallery {
+  width: 100%;
+  height: calc(100vh - 7.5rem);
+  padding: 2rem;
+  padding-top: 9.6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.column-gallery .col {
+  width: 30rem;
+  text-align: left;
+  padding: 1rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+}
+
+.col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+
+.col.project {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 2rem;
+}
+
+.col.project p {
+  margin: 1rem 0 1.5rem 0;
+}
+
+ul.tags {
+  list-style: none;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ul.tags li {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  border: solid 1px #000;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin: 0.25rem;
+  font-size: 1.2rem;
+}
+
+ul.tags li svg {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.scroll-arrow {
+  height: 6rem;
+  display: block;
+  margin: 4rem auto 1rem auto;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (max-width: 1050px) {

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import {Component, Fragment} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDiscord} from '@fortawesome/free-brands-svg-icons';
@@ -29,14 +28,7 @@ class OpenHaven extends Component {
         <Head>
           <title>Open Haven - The Open Source Discord Community</title>
           <link rel="icon" href="/favicon.ico" />
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossOrigin="anonymous" />
         </Head>
-
-        <nav className="top">
-          <Link href="/">
-            <a><img src="/me.svg" alt="Kirk M. (@saricden)" /></a>
-          </Link>
-        </nav>
 
         <header className="inline">
           <div className="centerbox">
@@ -70,29 +62,6 @@ class OpenHaven extends Component {
             }
           </div>
         </header>
-
-        <nav className="bottom">
-          <Link href="/">
-            <a>
-              <img src="/tv.svg" alt="" />
-              <span>Streams</span>
-            </a>
-          </Link>
-
-          <Link href="/open-haven">
-            <a>
-              <img src="/open-haven.svg" alt="" />
-              <span>Open Haven</span>
-            </a>
-          </Link>
-
-          <Link href="/projects">
-            <a>
-              <img src="/folder.svg" alt="" />
-              <span>Projects</span>
-            </a>
-          </Link>
-        </nav>
       </main>
     );
   }
